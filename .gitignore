@@ -1,0 +1,6 @@
+# Local system files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/

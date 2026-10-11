@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beta Deutsch Zentrum (BDZ) — Centre de langue allemande à Douala</title>
+<meta name="description" content="Beta Deutsch Zentrum (BDZ) — centre de formation en langue allemande à Douala. Du niveau A1 au C1, préparation aux examens Goethe & telc, accompagnement de votre projet d'études, de travail ou de voyage en Allemagne. Travail · Discipline · Succès.">
+<meta property="og:title" content="Beta Deutsch Zentrum (BDZ) — Deutsch lernen in Douala">
+<meta property="og:description" content="L'allemand qui ouvre le monde. Formations A1–C1, préparation examens, projet Allemagne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#F5EFE6', 'cream-soft': '#FAF7F2', 'cream-border': '#EADFCF',
+        ink: '#161514', muted: '#635E59',
+        rouge: '#C8102E', 'rouge-dark': '#9E0C24',
+        or: '#E0A008', 'or-light': '#F6C84C', bleu: '#1B3A6B'
+      },
+      fontFamily: { sans: ['Plus Jakarta Sans','ui-sans-serif','system-ui','sans-serif'], serif: ['Instrument Serif','Georgia','serif'] }
+    }
+  }
+}
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+:root{--cream:#F5EFE6;--ink:#161514;--rouge:#C8102E;--or:#E0A008;}
+html,body{background:#F5EFE6;color:#161514;font-family:'Plus Jakarta Sans',sans-serif;-webkit-font-smoothing:antialiased;}
+::selection{background:#C8102E;color:#fff;}
+.font-serif-it{font-family:'Instrument Serif',Georgia,serif;font-style:italic;}
+/* nav underline */
+.navlink{position:relative;}
+.navlink::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:#C8102E;transition:width .35s cubic-bezier(.2,.8,.2,1);}
+.navlink:hover::after{width:100%;}
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+.reveal.in{opacity:1;transform:none;}
+.reveal[data-d='1']{transition-delay:.08s}.reveal[data-d='2']{transition-delay:.16s}.reveal[data-d='3']{transition-delay:.24s}.reveal[data-d='4']{transition-delay:.32s}
+/* arrow hover */
+.btn-arrow i{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+.btn-arrow:hover i{transform:translate(4px,-4px);}
+/* logo */
+.logo-float{animation:floaty 6s ease-in-out infinite;transform-origin:center;}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.logo-ring{transform-origin:100px 100px;animation:spin 26s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.globe-land{animation:drift 14s linear infinite;}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-72px)}}
+.cap-float{animation:capf 5s ease-in-out infinite;transform-origin:center;}
+@keyframes capf{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-2deg)}}
+.shine{animation:shine 4.5s ease-in-out infinite;}
+@keyframes shine{0%,100%{opacity:.15}50%{opacity:.5}}
+/* marquee */
+.marquee{display:flex;gap:3rem;white-space:nowrap;animation:scrollx 28s linear infinite;}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+.card-lift{transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;}
+.card-lift:hover{transform:translateY(-8px);box-shadow:0 30px 60px -24px rgba(22,21,20,.28);}
+.img-zoom{overflow:hidden;}
+.img-zoom img{transition:transform 1.2s cubic-bezier(.16,1,.3,1);}
+.img-zoom:hover img{transform:scale(1.07);}
+#drawer{transition:transform .5s cubic-bezier(.16,1,.3,1);}
+.modal-bg{backdrop-filter:blur(10px);}
+.tab-btn.is-active{background:#161514;color:#F5EFE6;}
+.lvl-card{cursor:pointer;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.flag-stripe{background:linear-gradient(90deg,#161514 0 33.3%,#C8102E 33.3% 66.6%,#E0A008 66.6% 100%);}
+</style>
+</head>
+<body class="antialiased">
+<!-- ====== TOP THIN FLAG BAR ====== -->
+<div class="flag-stripe h-1.5 w-full"></div>
+
+<!-- ====== NAV ====== -->
+<header id="nav" class="fixed top-1.5 inset-x-0 z-40 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <nav class="mt-3 flex items-center justify-between rounded-full border border-cream-border/80 bg-cream-soft/70 backdrop-blur-md px-4 sm:px-6 py-2.5 shadow-[0_8px_30px_-18px_rgba(22,21,20,.4)]">
+      <a href="#accueil" class="flex items-center gap-2.5 group">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink text-or-light font-extrabold text-sm tracking-tight group-hover:bg-rouge transition-colors">BDZ</span>
+        <span class="font-extrabold text-ink text-[15px] leading-none hidden sm:block">Beta Deutsch Zentrum<span class="text-rouge">.</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-[13.5px] font-semibold text-ink/80">
+        <a href="#centre" class="navlink hover:text-ink">Le Centre</a>
+        <a href="#formations" class="navlink hover:text-ink">Formations</a>
+        <a href="#examens" class="navlink hover:text-ink">Examens</a>
+        <a href="#rentrees" class="navlink hover:text-ink">Rentrées</a>
+        <a href="#cadre" class="navlink hover:text-ink">Enseignants</a>
+        <a href="#ressources" class="navlink hover:text-ink">Ressources</a>
+        <a href="#avis" class="navlink hover:text-ink">Avis</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/237696104293" target="_blank" rel="noopener" class="btn-arrow hidden sm:inline-flex items-center gap-2 rounded-full border border-ink/80 px-4 py-2 text-[13px] font-bold text-ink hover:bg-ink hover:text-cream transition-colors">Nous écrire <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        <button id="burger" aria-label="Ouvrir le menu" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/70 text-ink"><i data-lucide="menu" class="w-5 h-5"></i></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div id="overlay" class="fixed inset-0 z-40 bg-ink/40 opacity-0 pointer-events-none transition-opacity duration-400"></div>
+<aside id="drawer" class="fixed top-0 right-0 z-50 h-full w-[82%] max-w-sm translate-x-full bg-cream-soft border-l border-cream-border px-7 py-7 flex flex-col">
+  <div class="flex items-center justify-between">
+    <span class="font-extrabold text-ink">Menu</span>
+    <button id="closeDrawer" aria-label="Fermer" class="h-10 w-10 inline-flex items-center justify-center rounded-full border border-ink/60"><i data-lucide="x" class="w-5 h-5"></i></button>
+  </div>
+  <nav class="mt-8 flex flex-col gap-1 text-lg font-semibold text-ink">
+    <a href="#centre" class="drawer-link py-3 border-b border-cream-border">Le Centre</a>
+    <a href="#formations" class="drawer-link py-3 border-b border-cream-border">Formations</a>
+    <a href="#examens" class="drawer-link py-3 border-b border-cream-border">Examens &amp; certifications</a>
+    <a href="#pourquoi" class="drawer-link py-3 border-b border-cream-border">Pourquoi l'allemand</a>
+    <a href="#rentrees" class="drawer-link py-3 border-b border-cream-border">Rentrées</a>
+    <a href="#methode" class="drawer-link py-3 border-b border-cream-border">Méthode</a>
+    <a href="#cadre" class="drawer-link py-3 border-b border-cream-border">Enseignants &amp; cadre</a>
+    <a href="#quiz" class="drawer-link py-3 border-b border-cream-border">Quiz &amp; concours</a>
+    <a href="#ressources" class="drawer-link py-3 border-b border-cream-border">Ressources</a>
+    <a href="#galerie" class="drawer-link py-3 border-b border-cream-border">Galerie</a>
+    <a href="#avis" class="drawer-link py-3 border-b border-cream-border">Avis</a>
+    <a href="#contact" class="drawer-link py-3 border-b border-cream-border">Contact</a>
+  </nav>
+  <a href="https://wa.me/237696104293" target="_blank" rel="noopener" class="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-ink text-cream px-5 py-3.5 font-bold">WhatsApp <i data-lucide="message-circle" class="w-4 h-4"></i></a>
+</aside>
+<!-- ====== HERO ====== -->
+<section id="accueil" class="relative w-full min-h-screen overflow-hidden">
+  <!-- bg image -->
+  <div class="absolute inset-0">
+    <img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/37454fa3097e/bdz_hero.jpeg?Expires=1794260275&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=P9cbg0u040WezdbCOkYife1AbfBTz3sO%2BS4rckmscNfHZCnyaQ4yJTHpkcV7XouX%2B%2FMwFcSqSBEmQoVOBeh8GbuQAm%2F3VE29thkYm4UqJhcP2rHf9Q9DkZny8BtokSl2Fjq0LCXOIOgmH%2BzkM9mL1bL5eXtLCs%2Bxg1p5sQEQKwKgw2l%2FdkjgS5hG2k27ZwzXDKx%2BH%2BMJOk8CWW23AW%2BvhWafStbjfEso5mP2Ad91dA%2Fh2pu1bf8qOWUcXf2Cx3%2BOayHLhRCq7lyE6mwZmLRD%2B6dv2HyVZgn%2F0OlLt5AF0sISjWBXHbl0QOJhzpurtbXZ2BgjiwJAKoMcoc8oxPUEWA%3D%3D" alt="Étudiants apprenant l'allemand au Beta Deutsch Zentrum" class="h-full w-full object-cover object-center">
+  </div>
+  <!-- gradients -->
+  <div class="absolute inset-0 bg-gradient-to-r from-cream via-cream/90 to-transparent lg:w-[62%]"></div>
+  <div class="absolute inset-x-0 top-0 h-56 lg:h-64 bg-gradient-to-b from-cream via-cream/60 to-transparent"></div>
+  <div class="absolute inset-x-0 bottom-0 h-48 lg:h-56 bg-gradient-to-t from-cream via-cream/70 to-transparent"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 min-h-screen flex items-center">
+    <div class="grid lg:grid-cols-12 gap-10 w-full pt-28 pb-16 items-center">
+      <!-- left -->
+      <div class="lg:col-span-7">
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge">
+          <span class="h-px w-8 bg-rouge"></span> Deutsch lernen · Douala, Cameroun
+        </p>
+        <h1 class="reveal mt-5 text-[clamp(2.6rem,7vw,5.3rem)] font-extrabold leading-[0.98] tracking-tight text-ink">
+          Apprenez l'allemand.<br>
+          <span class="font-serif-it font-normal text-rouge">Vivez l'Allemagne.</span>
+        </h1>
+        <p class="reveal mt-6 max-w-xl text-[17px] leading-relaxed text-muted">
+          Beta Deutsch Zentrum (BDZ) est votre centre de langue allemande à Douala. Du niveau <b class="text-ink">A1 au C1</b>, nous transformons l'apprentissage en projet concret : étudier, travailler ou voyager en Allemagne. <span class="text-ink font-semibold">Le voyage à portée de main.</span>
+        </p>
+        <div class="reveal mt-9 flex flex-wrap items-center gap-3">
+          <a href="#formations" class="btn-arrow inline-flex items-center gap-2 rounded-full bg-ink text-cream px-7 py-4 text-[15px] font-bold hover:bg-rouge transition-colors">Découvrir les formations <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+          <button id="openTour" class="inline-flex items-center gap-2 rounded-full border border-ink/70 px-6 py-4 text-[15px] font-bold text-ink hover:bg-ink hover:text-cream transition-colors"><i data-lucide="play" class="w-4 h-4"></i> Visite du centre</button>
+        </div>
+        <!-- social proof -->
+        <div class="reveal mt-10 flex items-center gap-4">
+          <div class="flex -space-x-3">
+            <span class="h-10 w-10 rounded-full border-2 border-cream bg-rouge text-cream text-xs font-bold inline-flex items-center justify-center">A1</span>
+            <span class="h-10 w-10 rounded-full border-2 border-cream bg-or text-ink text-xs font-bold inline-flex items-center justify-center">A2</span>
+            <span class="h-10 w-10 rounded-full border-2 border-cream bg-bleu text-cream text-xs font-bold inline-flex items-center justify-center">B1</span>
+            <span class="h-10 w-10 rounded-full border-2 border-cream bg-ink text-cream text-xs font-bold inline-flex items-center justify-center">B2</span>
+          </div>
+          <div class="text-sm">
+            <div class="flex items-center gap-1 text-or">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <span class="ml-1 font-bold text-ink">5,0/5</span>
+            </div>
+            <p class="text-muted">Noté <b class="text-ink">parfait</b> sur Google</p>
+          </div>
+        </div>
+      </div>
+      <!-- right : animated logo -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        <div class="relative">
+          <div class="absolute -inset-6 rounded-full bg-rouge/10 blur-2xl shine"></div>
+          <svg class="logo-float relative w-[260px] h-[260px] sm:w-[330px] sm:h-[330px] drop-shadow-[0_26px_50px_rgba(22,21,20,0.28)]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Beta Deutsch Zentrum">
+  <defs>
+    <clipPath id="globeClip"><circle cx="100" cy="122" r="30"/></clipPath>
+    <path id="topArc" d="M 26 100 A 74 74 0 0 1 174 100"/>
+    <path id="botArc" d="M 28 100 A 72 72 0 0 0 172 100"/>
+    <radialGradient id="globeG" cx="38%" cy="32%" r="75%"><stop offset="0%" stop-color="#2f5fa6"/><stop offset="100%" stop-color="#15345f"/></radialGradient>
+    <linearGradient id="capG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F6C84C"/><stop offset="100%" stop-color="#D99405"/></linearGradient>
+  </defs>
+  <!-- decorative rotating dotted ring -->
+  <circle class="logo-ring" cx="100" cy="100" r="96" fill="none" stroke="#C8102E" stroke-width="1.4" stroke-dasharray="2 7" opacity="0.5"/>
+  <!-- plate -->
+  <circle cx="100" cy="100" r="90" fill="#FAF7F2" stroke="#161514" stroke-width="3"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#161514" stroke-width="1" opacity="0.35"/>
+  <!-- circular text -->
+  <g fill="#161514" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800">
+    <text font-size="11.5" letter-spacing="2.3"><textPath href="#topArc" startOffset="50%" text-anchor="middle">BETA DEUTSCH ZENTRUM</textPath></text>
+    <text font-size="8.6" letter-spacing="2"><textPath href="#botArc" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">TRAVAIL • DISCIPLINE • SUCCÈS</textPath></text>
+  </g>
+  <!-- stars -->
+  <text x="23" y="104" font-size="9" fill="#161514">★</text>
+  <text x="170" y="104" font-size="9" fill="#161514">★</text>
+  <!-- graduation cap -->
+  <g class="cap-float">
+    <path d="M100 58 L128 70 L100 82 L72 70 Z" fill="url(#capG)" stroke="#161514" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M84 76 L84 88 Q100 97 116 88 L116 76" fill="#E0A008" stroke="#161514" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M128 70 L128 86" stroke="#161514" stroke-width="1.6"/>
+    <circle cx="128" cy="88" r="2.4" fill="#161514"/>
+  </g>
+  <!-- globe -->
+  <g>
+    <circle cx="100" cy="122" r="30" fill="url(#globeG)" stroke="#161514" stroke-width="2"/>
+    <g clip-path="url(#globeClip)">
+      <g class="globe-land" fill="#2f9e55">
+        <path d="M74 108 q10 -4 16 2 q6 6 -2 12 q-8 4 -14 -2 q-6 -6 0 -12 Z"/>
+        <path d="M96 128 q10 -3 15 4 q4 8 -6 12 q-10 2 -13 -6 q-2 -7 4 -10 Z"/>
+        <path d="M118 112 q8 0 9 7 q0 7 -8 7 q-7 -1 -6 -8 Z"/>
+        <path d="M146 108 q10 -4 16 2 q6 6 -2 12 q-8 4 -14 -2 q-6 -6 0 -12 Z"/>
+        <path d="M168 128 q10 -3 15 4 q4 8 -6 12 q-10 2 -13 -6 q-2 -7 4 -10 Z"/>
+      </g>
+    </g>
+    <ellipse cx="100" cy="122" rx="30" ry="11" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+    <line x1="100" y1="92" x2="100" y2="152" stroke="#ffffff" stroke-width="0.9" opacity="0.45"/>
+    <circle cx="100" cy="122" r="30" fill="none" stroke="#ffffff" stroke-width="0.6" opacity="0.25"/>
+  </g>
+  <!-- BDZ -->
+  <g font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="16" text-anchor="middle">
+    <text x="90" y="170" fill="#161514">B</text>
+    <text x="100" y="170" fill="#C8102E">D</text>
+    <text x="111" y="170" fill="#E0A008">Z</text>
+  </g>
+</svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#centre" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-ink/60 hover:text-ink animate-bounce hidden sm:block" aria-label="Défiler"><i data-lucide="chevron-down" class="w-7 h-7"></i></a>
+</section>
+<!-- ====== MARQUEE ====== -->
+<section class="border-y border-cream-border bg-cream-soft py-4 overflow-hidden">
+  <div class="marquee text-ink/70 font-bold uppercase tracking-[0.2em] text-sm">
+    <span class="flex items-center gap-3"><i data-lucide="star" class="w-4 h-4 text-or fill-current"></i> 5,0/5 sur Google</span>
+    <span class="flex items-center gap-3"><i data-lucide="languages" class="w-4 h-4 text-rouge"></i> Niveaux A1 → C1</span>
+    <span class="flex items-center gap-3"><i data-lucide="award" class="w-4 h-4 text-bleu"></i> Préparation Goethe & telc</span>
+    <span class="flex items-center gap-3"><i data-lucide="plane" class="w-4 h-4 text-ink"></i> Projet Allemagne</span>
+    <span class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-rouge"></i> Douala – face Collège Pozam</span>
+    <span class="flex items-center gap-3"><i data-lucide="star" class="w-4 h-4 text-or fill-current"></i> 5,0/5 sur Google</span>
+    <span class="flex items-center gap-3"><i data-lucide="languages" class="w-4 h-4 text-rouge"></i> Niveaux A1 → C1</span>
+    <span class="flex items-center gap-3"><i data-lucide="award" class="w-4 h-4 text-bleu"></i> Préparation Goethe & telc</span>
+    <span class="flex items-center gap-3"><i data-lucide="plane" class="w-4 h-4 text-ink"></i> Projet Allemagne</span>
+    <span class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-rouge"></i> Douala – face Collège Pozam</span>
+  </div>
+</section>
+
+<!-- ====== LE CENTRE ====== -->
+<section id="centre" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+      <div class="reveal img-zoom rounded-[28px] border border-cream-border shadow-[0_40px_80px_-40px_rgba(22,21,20,.4)]">
+        <img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/74aa1c452acf/bdz_study.jpeg?Expires=1794260321&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=e12d%2FgVVp3NFov0D7yycKaOflfqw9ts%2FBaBfWvdRZg3HZZ%2FRdzadZ2idITo2Vp6kmznE2eES5LrDxYdSmaP7qW5QNAxRTiwWx%2FK40OPxv1Lu2zIMC9ElxRDWDF8W2PsrTTfPq%2BcadFjtdF2MciTy6JH0BMWZFxqD6FzZitnY%2BJnBuhmWVsB5X3VGQLAQTdsYRc2FUspTeRbo5%2BBH91Q51NvrxBkaMgFav8HIPWJ55ky2PGJQRwPxVs%2FqDMhE2m7flRH6MPS6%2FAqpWvD85MP5nooVyipzizOSjm4M0O%2BckPZKXQLB9IH6GitXg84NOrcw1fmH5%2BjZugWzS2pP4Y0NaQ%3D%3D" alt="Apprentissage de l'allemand au centre BDZ" class="w-full h-full object-cover rounded-[28px]">
+      </div>
+      <div>
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Le Centre</p>
+        <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Un centre dédié à <span class="font-serif-it font-normal text-rouge">votre réussite</span> en allemand.</h2>
+        <p class="reveal mt-6 text-[16.5px] leading-relaxed text-muted">Situé à Douala, sur l'axe lourd Douala–Yaoundé, en face du Collège Pozam, Beta Deutsch Zentrum accompagne les jeunes Camerounais vers l'Allemagne. Notre conviction est simple : une langue bien apprise, dans la rigueur et la bienveillance, change une vie.</p>
+        <p class="reveal mt-4 text-[16.5px] leading-relaxed text-muted">« Que fais-tu après ton BAC ? » — chez BDZ, nous répondons par un parcours clair : la maîtrise de l'allemand pour étudier, travailler ou voyager.</p>
+        <div class="reveal mt-8 grid grid-cols-3 gap-3">
+          <div class="rounded-2xl border border-cream-border bg-cream-soft p-4 text-center"><div class="text-2xl font-extrabold text-ink">Travail</div><div class="text-[11px] uppercase tracking-widest text-muted mt-1">La base</div></div>
+          <div class="rounded-2xl border border-cream-border bg-cream-soft p-4 text-center"><div class="text-2xl font-extrabold text-rouge">Discipline</div><div class="text-[11px] uppercase tracking-widest text-muted mt-1">Le cap</div></div>
+          <div class="rounded-2xl border border-cream-border bg-cream-soft p-4 text-center"><div class="text-2xl font-extrabold text-or">Succès</div><div class="text-[11px] uppercase tracking-widest text-muted mt-1">Le but</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== POURQUOI L'ALLEMAND ====== -->
+<section class="relative py-24 lg:py-32 bg-ink text-cream overflow-hidden">
+  <div class="absolute inset-0 opacity-30">
+    <img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/639108354220/bdz_germany.jpeg?Expires=1794260309&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=FRTKhvJQvXi5RXry2742tE9NNJiFk2T9nsKafka3MtoT9%2FXG34ANlIOYuERfpHzx2lJc5gHH4JTh1VZI6LP%2B793giNniNOJyxH40C5S4tlxV8XFZKkDOfsocrRRcR3Tf4kxljjns3R2FyVJO%2BS8ugMMCpFjaI03HkwI2ZqFAv52e1mW%2FboKIU1bPcT5v1YHdES7y1DozVWu%2BKJHFzS5nZoMOawtP%2FuHT63l4pS%2Fr1CMbwMMz7AdsQjocNUWtkh5RwkQgJt11t%2F7SFLFuuEXxi84KeCxKfgc5M1DVSTh2wfKJoXyZjaKixMwlP4pfySbGh5ILHG7pzv5j%2BuRx4tP4Bg%3D%3D" alt="Villes d'Allemagne" class="w-full h-full object-cover">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/50"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-or-light"><span class="h-px w-8 bg-or-light"></span> Pourquoi l'allemand ?</p>
+    <h2 class="reveal mt-5 max-w-3xl text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Une langue, <span class="font-serif-it font-normal text-or-light">des milliers de portes</span> ouvertes.</h2>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal" data-d="1"><div class="h-12 w-12 rounded-xl bg-cream/10 flex items-center justify-center text-or-light"><i data-lucide="graduation-cap"></i></div><h3 class="mt-5 font-bold text-lg">Étudier en Allemagne</h3><p class="mt-2 text-cream/70 text-[15px] leading-relaxed">Universités publiques souvent gratuites et diplômes reconnus dans le monde entier.</p></div>
+      <div class="reveal" data-d="2"><div class="h-12 w-12 rounded-xl bg-cream/10 flex items-center justify-center text-or-light"><i data-lucide="briefcase"></i></div><h3 class="mt-5 font-bold text-lg">Travailler & Ausbildung</h3><p class="mt-2 text-cream/70 text-[15px] leading-relaxed">Formations professionnelles rémunérées et forte demande de main-d'œuvre qualifiée.</p></div>
+      <div class="reveal" data-d="3"><div class="h-12 w-12 rounded-xl bg-cream/10 flex items-center justify-center text-or-light"><i data-lucide="globe-2"></i></div><h3 class="mt-5 font-bold text-lg">Voyager & vivre</h3><p class="mt-2 text-cream/70 text-[15px] leading-relaxed">Au cœur de l'Europe : visa facilité quand la langue est maîtrisée.</p></div>
+      <div class="reveal" data-d="4"><div class="h-12 w-12 rounded-xl bg-cream/10 flex items-center justify-center text-or-light"><i data-lucide="heart-handshake"></i></div><h3 class="mt-5 font-bold text-lg">Un avenir choisi</h3><p class="mt-2 text-cream/70 text-[15px] leading-relaxed">Donner un cap clair à votre projet, dès aujourd'hui, pas de manière aléatoire.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FORMATIONS ====== -->
+<section id="formations" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div>
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Nos formations</p>
+        <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Un parcours clair, <span class="font-serif-it font-normal text-rouge">niveau par niveau.</span></h2>
+      </div>
+      <p class="reveal max-w-sm text-muted text-[15.5px] leading-relaxed">L'allemand est notre spécialité — et nous proposons aussi des cours d'<b class="text-ink">anglais</b>. Chaque niveau suit le cadre européen (CECRL). <b class="text-ink">Cliquez sur un niveau</b> pour voir sa description complète et son prix.</p>
+    </div>
+    <!-- tabs langue -->
+    <div class="reveal mt-12 flex flex-wrap items-center gap-4">
+      <div class="inline-flex rounded-full border border-cream-border bg-cream-soft p-1">
+        <button class="tab-btn is-active rounded-full px-6 py-2.5 text-sm font-bold transition-colors" data-tab="de">🇩🇪 Allemand</button>
+        <button class="tab-btn rounded-full px-6 py-2.5 text-sm font-bold text-muted transition-colors" data-tab="en">🇬🇧 Anglais</button>
+      </div>
+      <span class="inline-flex items-center gap-2 text-sm text-muted"><i data-lucide="mouse-pointer-click" class="w-4 h-4 text-rouge"></i> Astuce : chaque niveau est cliquable</span>
+    </div>
+    <!-- GRILLE ALLEMAND -->
+    <div id="grid-de" class="tab-grid mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <button class="lvl-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-level="de-a1"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-rouge">A1</span><span class="text-[11px] uppercase tracking-widest text-muted">Débutant</span></div><h3 class="mt-4 font-bold text-lg">Les premiers pas</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Se présenter, saluer, phrases simples du quotidien. On pose des fondations solides.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-d="1" data-level="de-a2"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-rouge">A2</span><span class="text-[11px] uppercase tracking-widest text-muted">Élémentaire</span></div><h3 class="mt-4 font-bold text-lg">La vie quotidienne</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Comprendre et s'exprimer sur des sujets familiers : famille, achats, travail.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-d="2" data-level="de-b1"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-bleu">B1</span><span class="text-[11px] uppercase tracking-widest text-muted">Intermédiaire</span></div><h3 class="mt-4 font-bold text-lg">L'autonomie</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Niveau souvent exigé pour le visa et l'inscription universitaire. Un cap décisif.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-level="de-b2"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-bleu">B2</span><span class="text-[11px] uppercase tracking-widest text-muted">Avancé</span></div><h3 class="mt-4 font-bold text-lg">Études & métier</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Suivre des cours, travailler, argumenter avec aisance dans un cadre professionnel.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-d="1" data-level="de-c1"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-ink">C1</span><span class="text-[11px] uppercase tracking-widest text-muted">Maîtrise</span></div><h3 class="mt-4 font-bold text-lg">L'excellence</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">S'exprimer couramment, spontanément, pour les parcours les plus exigeants.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card reveal card-lift text-left rounded-3xl bg-ink text-cream p-7 flex flex-col justify-between" data-d="2" data-level="de-exam"><div><div class="flex items-center gap-2 text-or-light"><i data-lucide="award" class="w-5 h-5"></i><span class="text-[11px] uppercase tracking-widest">Examens</span></div><h3 class="mt-4 font-bold text-lg">Préparation Goethe & telc</h3><p class="mt-2 text-cream/70 text-[15px] leading-relaxed">Entraînement ciblé aux certifications officielles reconnues pour le visa et l'université.</p></div><span class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-or-light">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+    </div>
+    <!-- GRILLE ANGLAIS -->
+    <div id="grid-en" class="tab-grid hidden mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <button class="lvl-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-level="en-a1"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-bleu">A1</span><span class="text-[11px] uppercase tracking-widest text-muted">Beginner</span></div><h3 class="mt-4 font-bold text-lg">First steps</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Se présenter, saluer et tenir une conversation très simple en anglais.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-bleu">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-level="en-a2"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-bleu">A2</span><span class="text-[11px] uppercase tracking-widest text-muted">Elementary</span></div><h3 class="mt-4 font-bold text-lg">Everyday English</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Échanger sur la vie quotidienne, le travail et les voyages avec aisance.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-bleu">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-level="en-b1"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-rouge">B1</span><span class="text-[11px] uppercase tracking-widest text-muted">Intermediate</span></div><h3 class="mt-4 font-bold text-lg">Independent user</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Comprendre l'essentiel et s'exprimer sur des sujets variés, à l'écrit comme à l'oral.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-level="en-b2"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-rouge">B2</span><span class="text-[11px] uppercase tracking-widest text-muted">Upper-inter.</span></div><h3 class="mt-4 font-bold text-lg">Confident English</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Argumenter, travailler et étudier en anglais dans un cadre professionnel.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-level="en-c1"><div class="flex items-center justify-between"><span class="text-4xl font-extrabold text-ink">C1</span><span class="text-[11px] uppercase tracking-widest text-muted">Advanced</span></div><h3 class="mt-4 font-bold text-lg">Fluent English</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">S'exprimer couramment et spontanément, pour les parcours les plus exigeants.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-ink">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="lvl-card card-lift text-left rounded-3xl bg-ink text-cream p-7 flex flex-col justify-between" data-level="en-conv"><div><div class="flex items-center gap-2 text-or-light"><i data-lucide="messages-square" class="w-5 h-5"></i><span class="text-[11px] uppercase tracking-widest">Conversation</span></div><h3 class="mt-4 font-bold text-lg">Anglais oral & TOEFL/IELTS</h3><p class="mt-2 text-cream/70 text-[15px] leading-relaxed">Ateliers de conversation et préparation aux tests internationaux.</p></div><span class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-or-light">Détail & prix <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+    </div>
+    <!-- infos pratiques -->
+    <div class="reveal mt-10 rounded-3xl border border-cream-border bg-cream-soft p-7 sm:p-9">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div><div class="text-[11px] uppercase tracking-widest text-muted">Inscription</div><div class="mt-1 text-2xl font-extrabold text-ink">10 000 FCFA</div></div>
+        <div><div class="text-[11px] uppercase tracking-widest text-muted">Formation / niveau</div><div class="mt-1 text-2xl font-extrabold text-ink">90 000 FCFA</div></div>
+        <div><div class="text-[11px] uppercase tracking-widest text-muted">Durée / niveau</div><div class="mt-1 text-2xl font-extrabold text-ink">3 mois</div></div>
+        <div><div class="text-[11px] uppercase tracking-widest text-muted">Prochaine rentrée</div><div class="mt-1 text-2xl font-extrabold text-rouge">06 avril 2026</div></div>
+      </div>
+      <p class="mt-5 text-xs text-muted">Tarifs indicatifs communiqués par le centre, valables pour l'allemand comme pour l'anglais. Cliquez sur un niveau pour le détail. Pour les horaires et modalités à jour, contactez-nous directement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== EXAMENS ====== -->
+<section id="examens" class="py-24 lg:py-32 bg-cream-soft border-y border-cream-border">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="reveal inline-flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Examens &amp; certifications <span class="h-px w-8 bg-rouge"></span></p>
+      <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Des diplômes <span class="font-serif-it font-normal text-rouge">reconnus partout.</span></h2>
+      <p class="reveal mt-5 text-muted text-[16px] leading-relaxed">Nous préparons aux deux grandes certifications officielles d'allemand : le <b class="text-ink">Goethe-Zertifikat</b> (Goethe-Institut) et <b class="text-ink">telc</b>. Toutes deux suivent le Cadre européen commun de référence (CECRL) et évaluent les niveaux <b class="text-ink">du A1 au C2</b>.</p>
+    </div>
+    <div class="mt-14 grid lg:grid-cols-2 gap-6">
+      <div class="reveal rounded-3xl border border-cream-border bg-cream p-7 sm:p-8">
+        <div class="flex items-center gap-3"><span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-or-light"><i data-lucide="award" class="w-6 h-6"></i></span><div><div class="text-[11px] uppercase tracking-widest text-muted">Certification</div><h3 class="font-extrabold text-xl text-ink">Goethe-Zertifikat</h3></div></div>
+        <p class="mt-4 text-muted text-[15px] leading-relaxed">La certification de référence du Goethe-Institut, disponible du A1 au C2. Chaque examen se compose de <b class="text-ink">4 modules</b> : Lesen (lire), Hören (écouter), Schreiben (écrire) et Sprechen (parler).</p>
+        <ul class="mt-5 space-y-2.5 text-[15px] text-muted">
+          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-rouge mt-1"></i> Évaluation possible dès le niveau A1 (Start Deutsch 1).</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-rouge mt-1"></i> À partir du B1, les 4 modules peuvent être passés séparément.</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-rouge mt-1"></i> Épreuve orale souvent en binôme.</li>
+        </ul>
+      </div>
+      <div class="reveal rounded-3xl border border-cream-border bg-cream p-7 sm:p-8" data-d="1">
+        <div class="flex items-center gap-3"><span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-rouge text-cream"><i data-lucide="file-badge" class="w-6 h-6"></i></span><div><div class="text-[11px] uppercase tracking-widest text-muted">Certification</div><h3 class="font-extrabold text-xl text-ink">telc</h3></div></div>
+        <p class="mt-4 text-muted text-[15px] leading-relaxed">The European Language Certificates : des examens standardisés du A1 au C2, avec une <b class="text-ink">partie écrite</b> et une <b class="text-ink">partie orale</b> couvrant les quatre compétences.</p>
+        <ul class="mt-5 space-y-2.5 text-[15px] text-muted">
+          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-rouge mt-1"></i> Évaluation possible dès le niveau A1.</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-rouge mt-1"></i> Versions spécialisées : telc Beruf (travail), Medizin (médecine)…</li>
+          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-rouge mt-1"></i> Examens « deux niveaux » comme telc Deutsch A2·B1.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="reveal mt-6 rounded-3xl bg-ink text-cream p-7 sm:p-9">
+      <div class="flex items-center gap-3 text-or-light"><i data-lucide="list-checks" class="w-5 h-5"></i><span class="text-[11px] font-bold uppercase tracking-[0.2em]">Les 4 compétences évaluées</span></div>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div><div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="headphones" class="w-5 h-5 text-or-light"></i> Hören</div><p class="mt-1 text-cream/70 text-sm">Compréhension orale : dialogues, annonces, messages.</p></div>
+        <div><div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="book-open-text" class="w-5 h-5 text-or-light"></i> Lesen</div><p class="mt-1 text-cream/70 text-sm">Compréhension écrite : courriels, articles, affiches.</p></div>
+        <div><div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="pen-line" class="w-5 h-5 text-or-light"></i> Schreiben</div><p class="mt-1 text-cream/70 text-sm">Production écrite : lettres, messages, argumentation.</p></div>
+        <div><div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="mic" class="w-5 h-5 text-or-light"></i> Sprechen</div><p class="mt-1 text-cream/70 text-sm">Production orale : se présenter, dialoguer, exposer.</p></div>
+      </div>
+      <p class="mt-6 text-xs text-cream/50">Dans les deux systèmes, l'évaluation commence au niveau A1 et va jusqu'au C2. Le niveau à viser dépend de votre projet (visa, université, Ausbildung) : nous vous orientons vers l'examen adapté.</p>
+    </div>
+    <div class="reveal mt-16">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-[12px] font-bold uppercase tracking-[0.28em] text-rouge">Comparatif 2026</p>
+        <h3 class="mt-3 text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold text-ink leading-tight">Quel examen d'allemand choisir en 2026 ?</h3>
+        <p class="mt-3 text-muted text-[15.5px] leading-relaxed">Cinq certificats d'allemand se disputent votre dossier : visa d'<b class="text-ink">Ausbildung</b>, candidature <b class="text-ink">DAAD</b> ou admission <b class="text-ink">universitaire</b>. Voici comment les distinguer.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="rounded-3xl border border-cream-border bg-cream p-6"><div class="flex items-center gap-2 text-rouge"><i data-lucide="award" class="w-5 h-5"></i><span class="font-extrabold text-ink">Goethe</span></div><div class="mt-4 text-[11px] uppercase tracking-widest text-muted">Origine</div><div class="text-sm font-semibold text-ink">Allemagne · Goethe-Institut</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Niveaux</div><div class="text-sm font-semibold text-ink">A1 → C2</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Idéal pour</div><p class="text-sm text-muted leading-relaxed">Le plus reconnu au monde : visa, université, usage général.</p></div>
+        <div class="rounded-3xl border border-cream-border bg-cream p-6"><div class="flex items-center gap-2 text-rouge"><i data-lucide="file-badge" class="w-5 h-5"></i><span class="font-extrabold text-ink">telc</span></div><div class="mt-4 text-[11px] uppercase tracking-widest text-muted">Origine</div><div class="text-sm font-semibold text-ink">Allemagne / Europe</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Niveaux</div><div class="text-sm font-semibold text-ink">A1 → C2</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Idéal pour</div><p class="text-sm text-muted leading-relaxed">Visa, Ausbildung, travail. Versions pro &amp; médecine.</p></div>
+        <div class="rounded-3xl border border-cream-border bg-cream p-6"><div class="flex items-center gap-2 text-rouge"><i data-lucide="stamp" class="w-5 h-5"></i><span class="font-extrabold text-ink">ÖSD</span></div><div class="mt-4 text-[11px] uppercase tracking-widest text-muted">Origine</div><div class="text-sm font-semibold text-ink">Autriche</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Niveaux</div><div class="text-sm font-semibold text-ink">A1 → C2</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Idéal pour</div><p class="text-sm text-muted leading-relaxed">Reconnu à l'international, valable dans l'espace germanophone.</p></div>
+        <div class="rounded-3xl border-2 border-rouge bg-cream p-6"><div class="flex items-center gap-2 text-rouge"><i data-lucide="graduation-cap" class="w-5 h-5"></i><span class="font-extrabold text-ink">TestDaF</span></div><div class="mt-4 text-[11px] uppercase tracking-widest text-muted">Origine</div><div class="text-sm font-semibold text-ink">Allemagne</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Niveaux</div><div class="text-sm font-semibold text-ink">B2 → C1 (TDN 3–5)</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Idéal pour</div><p class="text-sm text-muted leading-relaxed">La clé de l'université allemande : TDN 4 (C1), accepté partout.</p></div>
+        <div class="rounded-3xl border border-cream-border bg-cream p-6"><div class="flex items-center gap-2 text-rouge"><i data-lucide="globe-2" class="w-5 h-5"></i><span class="font-extrabold text-ink">ECL</span></div><div class="mt-4 text-[11px] uppercase tracking-widest text-muted">Origine</div><div class="text-sm font-semibold text-ink">Europe · consortium</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Niveaux</div><div class="text-sm font-semibold text-ink">A1 → C1</div><div class="mt-2 text-[11px] uppercase tracking-widest text-muted">Idéal pour</div><p class="text-sm text-muted leading-relaxed">Reconnu en Europe ; nouveau format modulaire dès août 2026.</p></div>
+      </div>
+      <div class="mt-6 rounded-3xl border border-cream-border bg-cream-soft p-6 sm:p-7">
+        <div class="flex items-start gap-3"><i data-lucide="compass" class="w-5 h-5 text-rouge mt-0.5 shrink-0"></i><p class="text-[15px] text-muted leading-relaxed"><b class="text-ink">Notre conseil.</b> Pour un <b class="text-ink">visa d'Ausbildung</b>, un niveau B1/B2 (Goethe, telc ou ÖSD) suffit généralement. Pour une <b class="text-ink">admission universitaire</b> en cursus allemand, visez le <b class="text-ink">TestDaF (TDN 4 = C1)</b> ou la DSH. Pour une <b class="text-ink">candidature DAAD</b>, le niveau dépend du programme. En cas de doute, nous analysons votre projet et vous orientons vers le bon examen.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== POURQUOI ====== -->
+<section id="pourquoi" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div>
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Pourquoi l'allemand</p>
+        <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Un avenir, <span class="font-serif-it font-normal text-rouge">choisi.</span></h2>
+      </div>
+      <p class="reveal max-w-sm text-muted text-[15.5px] leading-relaxed">Quatre bonnes raisons de se lancer. <b class="text-ink">Cliquez sur une carte</b> pour en savoir plus.</p>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <button class="info-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-info="etudier"><span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-or-light"><i data-lucide="graduation-cap" class="w-6 h-6"></i></span><h3 class="mt-5 font-bold text-lg">Étudier en Allemagne</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Universités publiques souvent gratuites et diplômes reconnus dans le monde entier.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">En savoir plus <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="info-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-d="1" data-info="travailler"><span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-rouge text-cream"><i data-lucide="briefcase" class="w-6 h-6"></i></span><h3 class="mt-5 font-bold text-lg">Travailler &amp; Ausbildung</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Formations professionnelles rémunérées et forte demande de main-d'œuvre qualifiée.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">En savoir plus <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="info-card reveal card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-7" data-d="2" data-info="voyager"><span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-or text-ink"><i data-lucide="plane" class="w-6 h-6"></i></span><h3 class="mt-5 font-bold text-lg">Voyager &amp; vivre</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Au cœur de l'Europe : visa facilité quand la langue est maîtrisée.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-rouge">En savoir plus <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+      <button class="info-card reveal card-lift text-left rounded-3xl bg-ink text-cream p-7" data-d="3" data-info="avenir"><span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cream/10 text-or-light"><i data-lucide="compass" class="w-6 h-6"></i></span><h3 class="mt-5 font-bold text-lg">Un avenir choisi</h3><p class="mt-2 text-cream/70 text-[15px] leading-relaxed">Donner un cap clair à votre projet, dès aujourd'hui, pas de manière aléatoire.</p><span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-or-light">En savoir plus <i data-lucide="arrow-right" class="w-4 h-4"></i></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ====== RENTREES ====== -->
+<section id="rentrees" class="py-24 lg:py-32 bg-ink text-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="grid lg:grid-cols-2 gap-14 items-start">
+      <div>
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-or-light"><span class="h-px w-8 bg-or-light"></span> Nos rentrées</p>
+        <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Vous n'attendez pas, <span class="font-serif-it font-normal text-or-light">on ouvre une rentrée.</span></h2>
+        <p class="reveal mt-6 text-cream/75 text-[16.5px] leading-relaxed max-w-lg">Contrairement à l'année scolaire classique, Beta Deutsch Zentrum ouvre régulièrement de <b class="text-cream">nouvelles rentrées</b> tout au long de l'année. Vous n'attendez pas une date imposée : <b class="text-cream">choisissez la date qui vous convient</b> dans le calendrier, et nous formons un groupe pour un nouveau cycle de 3 mois par niveau.</p>
+        <ul class="reveal mt-7 space-y-3 text-cream/80 text-[15.5px]">
+          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-or-light mt-0.5"></i> De nouveaux groupes formés régulièrement, en journée comme en soirée.</li>
+          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-or-light mt-0.5"></i> Petits effectifs pour un suivi personnalisé.</li>
+          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-or-light mt-0.5"></i> Allemand et anglais, du niveau A1 au C1.</li>
+        </ul>
+        <a href="https://wa.me/237696104293?text=Bonjour%20BDZ%2C%20je%20souhaite%20conna%C3%AEtre%20la%20prochaine%20rentr%C3%A9e" target="_blank" rel="noopener" class="btn-arrow reveal mt-8 inline-flex items-center gap-2 rounded-full bg-cream text-ink px-7 py-4 font-bold hover:bg-or-light transition-colors">Réserver ma place <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="reveal">
+        <div class="rounded-3xl bg-cream/5 border border-cream/15 p-6 sm:p-8">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3 text-or-light"><i data-lucide="calendar-days" class="w-5 h-5"></i><span class="text-[11px] font-bold uppercase tracking-[0.2em]">Choisissez votre date</span></div>
+            <div class="flex items-center gap-1.5">
+              <button id="calPrev" aria-label="Mois précédent" class="h-9 w-9 rounded-full border border-cream/20 text-cream flex items-center justify-center hover:bg-cream/10 transition-colors"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+              <button id="calNext" aria-label="Mois suivant" class="h-9 w-9 rounded-full border border-cream/20 text-cream flex items-center justify-center hover:bg-cream/10 transition-colors"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+            </div>
+          </div>
+          <div id="calMonth" class="mt-5 text-center font-extrabold text-lg text-cream capitalize"></div>
+          <div class="mt-4 grid grid-cols-7 gap-1 text-center text-[11px] font-bold uppercase tracking-wide text-cream/40">
+            <span>Lu</span><span>Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span>
+          </div>
+          <div id="calGrid" class="mt-2 grid grid-cols-7 gap-1"></div>
+          <div class="mt-6 rounded-2xl bg-cream/5 border border-cream/15 p-4">
+            <div class="text-[11px] uppercase tracking-widest text-cream/50">Date choisie</div>
+            <div id="calPicked" class="mt-1 font-extrabold text-cream">Sélectionnez un jour ci-dessus</div>
+          </div>
+          <a id="calCta" href="https://wa.me/237696104293" target="_blank" rel="noopener" class="btn-arrow mt-4 w-full inline-flex items-center justify-center gap-2 rounded-full bg-cream text-ink px-6 py-3.5 font-bold hover:bg-or-light transition-colors">Confirmer ma date sur WhatsApp <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+          <p class="mt-4 text-xs text-cream/50">Choisissez librement votre date de début : nous formons régulièrement de nouveaux groupes. Le 06 avril 2026 reste notre rentrée de référence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== METHODE ====== -->
+<section id="methode" class="py-24 lg:py-32 bg-cream-soft border-y border-cream-border">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="reveal inline-flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> La méthode BDZ <span class="h-px w-8 bg-rouge"></span></p>
+      <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">De la salle de classe <span class="font-serif-it font-normal text-rouge">à l'aéroport.</span></h2>
+      <p class="reveal mt-5 text-muted text-[16px] leading-relaxed">Un accompagnement en quatre étapes, pensé pour transformer l'effort en résultat concret.</p>
+    </div>
+    <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal" data-d="1"><div class="flex items-center gap-4"><span class="text-5xl font-serif-it text-rouge">01</span><span class="flex-1 h-px bg-cream-border"></span></div><h3 class="mt-5 font-bold text-lg flex items-center gap-2"><i data-lucide="clipboard-check" class="w-5 h-5 text-rouge"></i> Évaluation</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">On écoute votre projet et on définit le bon point de départ.</p></div>
+      <div class="reveal" data-d="2"><div class="flex items-center gap-4"><span class="text-5xl font-serif-it text-rouge">02</span><span class="flex-1 h-px bg-cream-border"></span></div><h3 class="mt-5 font-bold text-lg flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5 text-rouge"></i> Apprentissage</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Cours structurés, immersion et pratique orale régulière, niveau par niveau.</p></div>
+      <div class="reveal" data-d="3"><div class="flex items-center gap-4"><span class="text-5xl font-serif-it text-rouge">03</span><span class="flex-1 h-px bg-cream-border"></span></div><h3 class="mt-5 font-bold text-lg flex items-center gap-2"><i data-lucide="file-check-2" class="w-5 h-5 text-rouge"></i> Certification</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Entraînement intensif aux examens officiels (Goethe, telc).</p></div>
+      <div class="reveal" data-d="4"><div class="flex items-center gap-4"><span class="text-5xl font-serif-it text-rouge">04</span><span class="flex-1 h-px bg-cream-border"></span></div><h3 class="mt-5 font-bold text-lg flex items-center gap-2"><i data-lucide="plane-takeoff" class="w-5 h-5 text-rouge"></i> Projet Allemagne</h3><p class="mt-2 text-muted text-[15px] leading-relaxed">Orientation pour les démarches d'études, d'Ausbildung ou de voyage.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ENSEIGNANTS & CADRE ====== -->
+<section id="cadre" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="grid lg:grid-cols-2 gap-14 items-start">
+      <div>
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Nos enseignants</p>
+        <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Des formateurs <span class="font-serif-it font-normal text-rouge">expérimentés.</span></h2>
+        <p class="reveal mt-6 text-muted text-[16.5px] leading-relaxed">Vous êtes encadré par des enseignants <b class="text-ink">hautement qualifiés</b>, cumulant <b class="text-ink">5 ans et plus d'expérience</b> dans l'enseignement de l'allemand. Ils maîtrisent les exigences des examens officiels (Goethe, telc) et savent transformer la théorie en pratique concrète.</p>
+        <ul class="reveal mt-7 space-y-3 text-muted text-[15.5px]">
+          <li class="flex items-start gap-3"><i data-lucide="user-check" class="w-5 h-5 text-rouge mt-0.5"></i> Pédagogues formés, passionnés et à l'écoute.</li>
+          <li class="flex items-start gap-3"><i data-lucide="target" class="w-5 h-5 text-rouge mt-0.5"></i> Spécialistes de la préparation aux certifications.</li>
+          <li class="flex items-start gap-3"><i data-lucide="users" class="w-5 h-5 text-rouge mt-0.5"></i> Suivi personnalisé en petits groupes.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="reveal text-[13px] font-bold uppercase tracking-widest text-muted">Notre méthode &amp; notre cadre — <span class="text-rouge normal-case tracking-normal font-semibold">cliquez pour le détail</span></p>
+        <div class="reveal mt-5 grid sm:grid-cols-2 gap-4">
+          <button class="info-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-6" data-info="methode"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink text-or-light"><i data-lucide="presentation" class="w-5 h-5"></i></span><h3 class="mt-4 font-bold">Méthode d'enseignement</h3><p class="mt-1.5 text-muted text-sm leading-relaxed">Immersion, oral et pédagogie active.</p></button>
+          <button class="info-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-6" data-info="salles"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-rouge text-cream"><i data-lucide="snowflake" class="w-5 h-5"></i></span><h3 class="mt-4 font-bold">Salles climatisées</h3><p class="mt-1.5 text-muted text-sm leading-relaxed">Un confort optimal pour apprendre.</p></button>
+          <button class="info-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-6" data-info="biblio"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-or text-ink"><i data-lucide="library" class="w-5 h-5"></i></span><h3 class="mt-4 font-bold">Bibliothèque</h3><p class="mt-1.5 text-muted text-sm leading-relaxed">Livres et ressources pour réviser.</p></button>
+          <button class="info-card card-lift text-left rounded-3xl border border-cream-border bg-cream-soft p-6" data-info="systeme"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-bleu text-cream"><i data-lucide="globe-2" class="w-5 h-5"></i></span><h3 class="mt-4 font-bold">Système européen</h3><p class="mt-1.5 text-muted text-sm leading-relaxed">Cursus aligné sur le CECRL.</p></button>
+          <button class="info-card card-lift text-left rounded-3xl bg-ink text-cream p-6 sm:col-span-2" data-info="wifi"><div class="flex items-center gap-4"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cream/10 text-or-light shrink-0"><i data-lucide="wifi" class="w-5 h-5"></i></span><div class="flex-1"><div class="flex items-center gap-2"><h3 class="font-bold">WiFi Starlink illimité</h3><span class="rounded-full bg-or-light text-ink text-[10px] font-bold px-2 py-0.5 uppercase tracking-wide">Inclus</span></div><p class="mt-1 text-cream/70 text-sm leading-relaxed">Connexion internet haut débit, illimitée, pour tout le personnel de l'établissement.</p></div><i data-lucide="arrow-right" class="w-4 h-4 text-or-light shrink-0"></i></div></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== STATS ====== -->
+<section class="py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="reveal text-center"><div class="text-5xl lg:text-6xl font-extrabold text-ink"><span class="count" data-to="5">0</span>,0</div><p class="mt-2 text-muted font-semibold uppercase tracking-widest text-xs">Note Google /5</p></div>
+    <div class="reveal text-center" data-d="1"><div class="text-5xl lg:text-6xl font-extrabold text-rouge">A1<span class="text-ink">→</span>C1</div><p class="mt-2 text-muted font-semibold uppercase tracking-widest text-xs">Tous les niveaux</p></div>
+    <div class="reveal text-center" data-d="2"><div class="text-5xl lg:text-6xl font-extrabold text-ink"><span class="count" data-to="3">0</span></div><p class="mt-2 text-muted font-semibold uppercase tracking-widest text-xs">Mois par formation</p></div>
+    <div class="reveal text-center" data-d="3"><div class="text-5xl lg:text-6xl font-extrabold text-or">100<span class="text-ink">%</span></div><p class="mt-2 text-muted font-semibold uppercase tracking-widest text-xs">Focus allemand</p></div>
+  </div>
+</section>
+<!-- ====== QUIZ ====== -->
+<section id="quiz" class="py-24 lg:py-32 bg-ink text-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div>
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-or-light"><span class="h-px w-8 bg-or-light"></span> Vie du centre</p>
+        <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Des quiz, <span class="font-serif-it font-normal text-or-light">des défis, des cadeaux.</span></h2>
+        <p class="reveal mt-6 text-cream/75 text-[16.5px] leading-relaxed">Apprendre, c'est aussi s'amuser. Beta Deutsch Zentrum organise régulièrement des <b class="text-cream">quiz et concours entre les différents niveaux</b> — A1 contre A2, B1 contre B2… Une façon motivante de réviser, de se dépasser et de créer une vraie communauté d'apprenants.</p>
+        <ul class="reveal mt-7 space-y-3 text-cream/80 text-[15.5px]">
+          <li class="flex items-start gap-3"><i data-lucide="trophy" class="w-5 h-5 text-or-light mt-0.5"></i> Des cadeaux à remporter pour les meilleurs.</li>
+          <li class="flex items-start gap-3"><i data-lucide="swords" class="w-5 h-5 text-or-light mt-0.5"></i> Des défis amicaux entre niveaux.</li>
+          <li class="flex items-start gap-3"><i data-lucide="party-popper" class="w-5 h-5 text-or-light mt-0.5"></i> Une ambiance conviviale et stimulante.</li>
+        </ul>
+      </div>
+      <div class="reveal grid grid-cols-2 gap-4">
+        <div class="rounded-3xl bg-cream/5 border border-cream/15 p-6 text-center"><i data-lucide="trophy" class="w-8 h-8 text-or-light mx-auto"></i><div class="mt-3 font-extrabold text-lg">Cadeaux</div><p class="text-cream/60 text-sm mt-1">à gagner</p></div>
+        <div class="rounded-3xl bg-cream/5 border border-cream/15 p-6 text-center"><i data-lucide="users-round" class="w-8 h-8 text-or-light mx-auto"></i><div class="mt-3 font-extrabold text-lg">Inter-niveaux</div><p class="text-cream/60 text-sm mt-1">A1 → C1</p></div>
+        <div class="rounded-3xl bg-cream/5 border border-cream/15 p-6 text-center"><i data-lucide="brain" class="w-8 h-8 text-or-light mx-auto"></i><div class="mt-3 font-extrabold text-lg">Quiz</div><p class="text-cream/60 text-sm mt-1">réguliers</p></div>
+        <div class="rounded-3xl bg-cream/5 border border-cream/15 p-6 text-center"><i data-lucide="heart-handshake" class="w-8 h-8 text-or-light mx-auto"></i><div class="mt-3 font-extrabold text-lg">Communauté</div><p class="text-cream/60 text-sm mt-1">solidaire</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== RESSOURCES ====== -->
+<section id="ressources" class="py-24 lg:py-32 bg-cream-soft border-y border-cream-border">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="reveal inline-flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Ressources de l'étudiant <span class="h-px w-8 bg-rouge"></span></p>
+      <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Tout pour <span class="font-serif-it font-normal text-rouge">s'entraîner.</span></h2>
+      <p class="reveal mt-5 text-muted text-[16px] leading-relaxed">Nos plateformes recommandées pour réviser, préparer vos examens et vous entraîner gratuitement entre deux cours. <b class="text-ink">Cliquez pour ouvrir le site.</b></p>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <a href="https://www.telc.net" target="_blank" rel="noopener" class="reveal card-lift group rounded-3xl border border-cream-border bg-cream p-6 flex items-start gap-4"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink text-or-light shrink-0"><i data-lucide="file-badge" class="w-5 h-5"></i></span><span class="flex-1 min-w-0"><span class="flex items-center justify-between"><b class="text-ink">telc.net</b><i data-lucide="arrow-up-right" class="w-4 h-4 text-muted group-hover:text-rouge"></i></span><span class="block mt-1 text-muted text-sm leading-relaxed">Examens officiels telc : modèles d'épreuves gratuits et informations.</span></span></a>
+      <a href="https://www.deutsch-pruefung.de" target="_blank" rel="noopener" class="reveal card-lift group rounded-3xl border border-cream-border bg-cream p-6 flex items-start gap-4" data-d="1"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-rouge text-cream shrink-0"><i data-lucide="clipboard-check" class="w-5 h-5"></i></span><span class="flex-1 min-w-0"><span class="flex items-center justify-between"><b class="text-ink">deutsch-pruefung.de</b><i data-lucide="arrow-up-right" class="w-4 h-4 text-muted group-hover:text-rouge"></i></span><span class="block mt-1 text-muted text-sm leading-relaxed">Tests et simulations d'examens d'allemand par niveau.</span></span></a>
+      <a href="https://www.goethe.de/de/spr/ueb.html" target="_blank" rel="noopener" class="reveal card-lift group rounded-3xl border border-cream-border bg-cream p-6 flex items-start gap-4" data-d="2"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-or text-ink shrink-0"><i data-lucide="award" class="w-5 h-5"></i></span><span class="flex-1 min-w-0"><span class="flex items-center justify-between"><b class="text-ink">Goethe-Institut</b><i data-lucide="arrow-up-right" class="w-4 h-4 text-muted group-hover:text-rouge"></i></span><span class="block mt-1 text-muted text-sm leading-relaxed">Exercices gratuits « Deutsch für Dich » et tests de niveau.</span></span></a>
+      <a href="https://learngerman.dw.com" target="_blank" rel="noopener" class="reveal card-lift group rounded-3xl border border-cream-border bg-cream p-6 flex items-start gap-4"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-bleu text-cream shrink-0"><i data-lucide="play-circle" class="w-5 h-5"></i></span><span class="flex-1 min-w-0"><span class="flex items-center justify-between"><b class="text-ink">Deutsche Welle (DW)</b><i data-lucide="arrow-up-right" class="w-4 h-4 text-muted group-hover:text-rouge"></i></span><span class="block mt-1 text-muted text-sm leading-relaxed">Cours gratuits A1→C1 et la série vidéo « Nico's Weg ».</span></span></a>
+      <a href="https://www.schubert-verlag.de/aufgaben/" target="_blank" rel="noopener" class="reveal card-lift group rounded-3xl border border-cream-border bg-cream p-6 flex items-start gap-4" data-d="1"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink text-or-light shrink-0"><i data-lucide="pencil-ruler" class="w-5 h-5"></i></span><span class="flex-1 min-w-0"><span class="flex items-center justify-between"><b class="text-ink">Schubert-Verlag</b><i data-lucide="arrow-up-right" class="w-4 h-4 text-muted group-hover:text-rouge"></i></span><span class="block mt-1 text-muted text-sm leading-relaxed">Exercices de grammaire en ligne, gratuits, par niveau.</span></span></a>
+      <a href="https://mein-deutschbuch.de" target="_blank" rel="noopener" class="reveal card-lift group rounded-3xl border border-cream-border bg-cream p-6 flex items-start gap-4" data-d="2"><span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-rouge text-cream shrink-0"><i data-lucide="book-open-text" class="w-5 h-5"></i></span><span class="flex-1 min-w-0"><span class="flex items-center justify-between"><b class="text-ink">mein-deutschbuch.de</b><i data-lucide="arrow-up-right" class="w-4 h-4 text-muted group-hover:text-rouge"></i></span><span class="block mt-1 text-muted text-sm leading-relaxed">Grammaire, vocabulaire et exercices d'allemand en libre accès.</span></span></a>
+    </div>
+    <p class="reveal mt-8 text-center text-xs text-muted">Liens vers des sites externes indépendants, fournis à titre de ressources. Beta Deutsch Zentrum n'est pas affilié à ces plateformes.</p>
+  </div>
+</section>
+
+<!-- ====== GALERIE ====== -->
+<section id="galerie" class="py-24 lg:py-32 bg-cream-soft border-y border-cream-border">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div>
+        <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Galerie</p>
+        <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Notre univers, <span class="font-serif-it font-normal text-rouge">en images.</span></h2>
+      </div>
+      <p class="reveal max-w-sm text-muted text-[15.5px] leading-relaxed">Un cadre accueillant à Douala et un horizon grand ouvert vers l'Allemagne.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <button class="gal reveal img-zoom rounded-2xl border border-cream-border row-span-2 col-span-2 lg:col-span-2" data-src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_editing/2026-10-11/25fc66d49532/bdz_batiment_hd.jpeg?Expires=1794263549&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=MZsn4dy4CANmdm8WhJX1DH3qkydfzbykjUC8poWUgUFTFlq7v2qVNL88UDzUbjdFWE03O2VUHcWlGKWTnunBgnNuB8d2QSk6DdSGdF%2F%2Fw00lShE8UZd4CFj8NiiQagH8pvYz9WbqjoZaFlaKGmS5zeJHwu2GXDV%2FwoesSodT4gN6l4aJeBRIGvIXThEBS2e4rQCOP6Q6v3GNwoKC%2BIYXQxxBhwpGIJKvEabVK5olczUO4e8%2BjyUxR3%2BXZtoCZbPfVb1elAkpoCWpDdXPLlZMI30HjDejOiPg3Mi5nXAK8l7WGsK1DJN6Yc0VQVVp4WARRS2LckQQ4y1FBtOKpfIzTg%3D%3D"><img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_editing/2026-10-11/25fc66d49532/bdz_batiment_hd.jpeg?Expires=1794263549&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=MZsn4dy4CANmdm8WhJX1DH3qkydfzbykjUC8poWUgUFTFlq7v2qVNL88UDzUbjdFWE03O2VUHcWlGKWTnunBgnNuB8d2QSk6DdSGdF%2F%2Fw00lShE8UZd4CFj8NiiQagH8pvYz9WbqjoZaFlaKGmS5zeJHwu2GXDV%2FwoesSodT4gN6l4aJeBRIGvIXThEBS2e4rQCOP6Q6v3GNwoKC%2BIYXQxxBhwpGIJKvEabVK5olczUO4e8%2BjyUxR3%2BXZtoCZbPfVb1elAkpoCWpDdXPLlZMI30HjDejOiPg3Mi5nXAK8l7WGsK1DJN6Yc0VQVVp4WARRS2LckQQ4y1FBtOKpfIzTg%3D%3D" alt="Le centre Beta Deutsch Zentrum à Douala" class="w-full h-full object-cover"></button>
+      <button class="gal reveal img-zoom rounded-2xl border border-cream-border" data-d="1" data-src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/c852d5d911dc/bdz_success.jpeg?Expires=1794260315&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=T%2Blb3dsAssm%2FX1nEZ66SsAdqhFv74P%2BcCdwVtPF2WaHzySzG2kaUGxUS%2BA46F7zuJ8t4VuQk%2B1hXIyZlSGf7weiB7snWNzLpqdI8gd%2FBLrZZmuR2Nqxtw9VXMEXaPus0Mtsal7Tki1feQuA2FnEvj8228CJimtGW4Q1bbsvjlf8elwMqcfcQATtD%2Br85DmsXAe49Rzb%2Bbl8jLZJGZwOpBrjtSKwCj0RoSkrkQGOkjnRDfO9R3TA4LZYznvnyhBzhskghJClCa5KqT%2FWzVL7nSE1a9lSgbLIyPyD%2BDZJ%2BLRK4oTjehKvuAvYlEhazN28m%2BXVnDH3oBE4qeAsvyN0B8Q%3D%3D"><img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/c852d5d911dc/bdz_success.jpeg?Expires=1794260315&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=T%2Blb3dsAssm%2FX1nEZ66SsAdqhFv74P%2BcCdwVtPF2WaHzySzG2kaUGxUS%2BA46F7zuJ8t4VuQk%2B1hXIyZlSGf7weiB7snWNzLpqdI8gd%2FBLrZZmuR2Nqxtw9VXMEXaPus0Mtsal7Tki1feQuA2FnEvj8228CJimtGW4Q1bbsvjlf8elwMqcfcQATtD%2Br85DmsXAe49Rzb%2Bbl8jLZJGZwOpBrjtSKwCj0RoSkrkQGOkjnRDfO9R3TA4LZYznvnyhBzhskghJClCa5KqT%2FWzVL7nSE1a9lSgbLIyPyD%2BDZJ%2BLRK4oTjehKvuAvYlEhazN28m%2BXVnDH3oBE4qeAsvyN0B8Q%3D%3D" alt="Diplomés célébrant leur réussite" class="w-full h-full object-cover aspect-square"></button>
+      <button class="gal reveal img-zoom rounded-2xl border border-cream-border" data-d="2" data-src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/639108354220/bdz_germany.jpeg?Expires=1794260309&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=FRTKhvJQvXi5RXry2742tE9NNJiFk2T9nsKafka3MtoT9%2FXG34ANlIOYuERfpHzx2lJc5gHH4JTh1VZI6LP%2B793giNniNOJyxH40C5S4tlxV8XFZKkDOfsocrRRcR3Tf4kxljjns3R2FyVJO%2BS8ugMMCpFjaI03HkwI2ZqFAv52e1mW%2FboKIU1bPcT5v1YHdES7y1DozVWu%2BKJHFzS5nZoMOawtP%2FuHT63l4pS%2Fr1CMbwMMz7AdsQjocNUWtkh5RwkQgJt11t%2F7SFLFuuEXxi84KeCxKfgc5M1DVSTh2wfKJoXyZjaKixMwlP4pfySbGh5ILHG7pzv5j%2BuRx4tP4Bg%3D%3D"><img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/639108354220/bdz_germany.jpeg?Expires=1794260309&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=FRTKhvJQvXi5RXry2742tE9NNJiFk2T9nsKafka3MtoT9%2FXG34ANlIOYuERfpHzx2lJc5gHH4JTh1VZI6LP%2B793giNniNOJyxH40C5S4tlxV8XFZKkDOfsocrRRcR3Tf4kxljjns3R2FyVJO%2BS8ugMMCpFjaI03HkwI2ZqFAv52e1mW%2FboKIU1bPcT5v1YHdES7y1DozVWu%2BKJHFzS5nZoMOawtP%2FuHT63l4pS%2Fr1CMbwMMz7AdsQjocNUWtkh5RwkQgJt11t%2F7SFLFuuEXxi84KeCxKfgc5M1DVSTh2wfKJoXyZjaKixMwlP4pfySbGh5ILHG7pzv5j%2BuRx4tP4Bg%3D%3D" alt="Villes d'Allemagne" class="w-full h-full object-cover aspect-square"></button>
+      <button class="gal reveal img-zoom rounded-2xl border border-cream-border col-span-2" data-d="3" data-src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/74aa1c452acf/bdz_study.jpeg?Expires=1794260321&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=e12d%2FgVVp3NFov0D7yycKaOflfqw9ts%2FBaBfWvdRZg3HZZ%2FRdzadZ2idITo2Vp6kmznE2eES5LrDxYdSmaP7qW5QNAxRTiwWx%2FK40OPxv1Lu2zIMC9ElxRDWDF8W2PsrTTfPq%2BcadFjtdF2MciTy6JH0BMWZFxqD6FzZitnY%2BJnBuhmWVsB5X3VGQLAQTdsYRc2FUspTeRbo5%2BBH91Q51NvrxBkaMgFav8HIPWJ55ky2PGJQRwPxVs%2FqDMhE2m7flRH6MPS6%2FAqpWvD85MP5nooVyipzizOSjm4M0O%2BckPZKXQLB9IH6GitXg84NOrcw1fmH5%2BjZugWzS2pP4Y0NaQ%3D%3D"><img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_generator/2026-10-11/74aa1c452acf/bdz_study.jpeg?Expires=1794260321&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=e12d%2FgVVp3NFov0D7yycKaOflfqw9ts%2FBaBfWvdRZg3HZZ%2FRdzadZ2idITo2Vp6kmznE2eES5LrDxYdSmaP7qW5QNAxRTiwWx%2FK40OPxv1Lu2zIMC9ElxRDWDF8W2PsrTTfPq%2BcadFjtdF2MciTy6JH0BMWZFxqD6FzZitnY%2BJnBuhmWVsB5X3VGQLAQTdsYRc2FUspTeRbo5%2BBH91Q51NvrxBkaMgFav8HIPWJ55ky2PGJQRwPxVs%2FqDMhE2m7flRH6MPS6%2FAqpWvD85MP5nooVyipzizOSjm4M0O%2BckPZKXQLB9IH6GitXg84NOrcw1fmH5%2BjZugWzS2pP4Y0NaQ%3D%3D" alt="Étude de l'allemand" class="w-full h-full object-cover"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CITATION ====== -->
+<section class="py-24 lg:py-32">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <i data-lucide="quote" class="reveal w-12 h-12 text-rouge mx-auto"></i>
+    <blockquote class="reveal mt-6 text-[clamp(1.6rem,3.4vw,2.6rem)] font-serif-it leading-snug text-ink">« Chaque jour où tu apprends quelque chose de nouveau est un jour où tu te rapproches de ton objectif. »</blockquote>
+    <p class="reveal mt-6 text-sm font-bold uppercase tracking-[0.25em] text-muted">Beta Deutsch Zentrum</p>
+  </div>
+</section>
+<!-- ====== AVIS ====== -->
+<section id="avis" class="py-24 lg:py-32 bg-ink text-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="reveal flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-or-light"><span class="h-px w-8 bg-or-light"></span> Avis</p>
+      <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">La confiance, <span class="font-serif-it font-normal text-or-light">ça se mérite.</span></h2>
+      <p class="reveal mt-6 text-cream/70 text-[16.5px] leading-relaxed max-w-lg">Nous préférons la vérité aux promesses. Voici notre note publique, telle qu'elle apparaît sur Google — ni plus, ni moins.</p>
+      <div class="reveal mt-8 flex flex-wrap gap-3">
+        <a href="https://www.google.com/maps/contrib/103394028969162251336" target="_blank" rel="noopener" class="btn-arrow inline-flex items-center gap-2 rounded-full bg-cream text-ink px-6 py-3.5 font-bold hover:bg-or-light transition-colors">Voir sur Google <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        <a href="https://www.google.com/maps/contrib/103394028969162251336" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-cream/40 px-6 py-3.5 font-bold hover:bg-cream/10 transition-colors">Laisser un avis <i data-lucide="pen-line" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="rounded-3xl bg-cream text-ink p-9 shadow-2xl">
+        <div class="flex items-center gap-4">
+          <div class="h-14 w-14 rounded-2xl bg-rouge text-cream flex items-center justify-center font-extrabold text-xl">G</div>
+          <div><div class="font-extrabold text-lg leading-none">Avis Google</div><div class="text-muted text-sm mt-1">Beta Deutsch Zentrum</div></div>
+        </div>
+        <div class="mt-6 flex items-end gap-4">
+          <div class="text-6xl font-extrabold leading-none">5,0</div>
+          <div class="pb-1"><div class="flex text-or"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div><div class="text-muted text-sm mt-1">5 avis — note maximale</div></div>
+        </div>
+        <div class="mt-6 space-y-2">
+          <div class="flex items-center gap-3 text-sm"><span class="w-6 text-muted">5★</span><span class="flex-1 h-2 rounded-full bg-cream-border"><span class="block h-2 rounded-full bg-or" style="width:100%"></span></span></div>
+          <div class="flex items-center gap-3 text-sm"><span class="w-6 text-muted">4★</span><span class="flex-1 h-2 rounded-full bg-cream-border"></span></div>
+          <div class="flex items-center gap-3 text-sm"><span class="w-6 text-muted">3★</span><span class="flex-1 h-2 rounded-full bg-cream-border"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section id="contact" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="reveal inline-flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.28em] text-rouge"><span class="h-px w-8 bg-rouge"></span> Contact <span class="h-px w-8 bg-rouge"></span></p>
+      <h2 class="reveal mt-5 text-[clamp(2rem,4.4vw,3.3rem)] font-extrabold leading-tight tracking-tight">Parlons de <span class="font-serif-it font-normal text-rouge">votre projet.</span></h2>
+      <p class="reveal mt-5 text-muted text-[16px] leading-relaxed">Une question, une inscription, un conseil ? Écrivez-nous ou passez nous voir. On vous répond avec plaisir.</p>
+    </div>
+    <div class="mt-14 grid lg:grid-cols-5 gap-6">
+      <div class="lg:col-span-2 space-y-4">
+        <a href="https://wa.me/237696104293" target="_blank" rel="noopener" class="card-lift flex items-center gap-4 rounded-2xl border border-cream-border bg-cream-soft p-5"><span class="h-12 w-12 rounded-xl bg-rouge/10 text-rouge flex items-center justify-center"><i data-lucide="message-circle"></i></span><div><div class="text-[11px] uppercase tracking-widest text-muted">WhatsApp</div><div class="font-bold text-ink">+237 696 10 42 93</div></div></a>
+        <a href="tel:+237675271890" class="card-lift flex items-center gap-4 rounded-2xl border border-cream-border bg-cream-soft p-5"><span class="h-12 w-12 rounded-xl bg-bleu/10 text-bleu flex items-center justify-center"><i data-lucide="phone"></i></span><div><div class="text-[11px] uppercase tracking-widest text-muted">Téléphone</div><div class="font-bold text-ink">+237 675 27 18 90 · 656 10 42 93</div></div></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=2P8H%2B45%20Douala" target="_blank" rel="noopener" class="card-lift flex items-center gap-4 rounded-2xl border border-cream-border bg-cream-soft p-5"><span class="h-12 w-12 rounded-xl bg-or/15 text-or flex items-center justify-center"><i data-lucide="map-pin"></i></span><div><div class="text-[11px] uppercase tracking-widest text-muted">Adresse</div><div class="font-bold text-ink leading-snug">Axe lourd Douala–Yaoundé, face Collège Pozam</div></div></a>
+        <div class="flex gap-3">
+          <a href="https://www.instagram.com/betadeutsch/" target="_blank" rel="noopener" class="card-lift flex-1 flex items-center justify-center gap-2 rounded-2xl border border-cream-border bg-cream-soft p-4 font-bold text-ink"><i data-lucide="instagram" class="w-5 h-5"></i> Instagram</a>
+          <a href="https://web.facebook.com/p/BETA-BDZ-61561541496897/" target="_blank" rel="noopener" class="card-lift flex-1 flex items-center justify-center gap-2 rounded-2xl border border-cream-border bg-cream-soft p-4 font-bold text-ink"><i data-lucide="facebook" class="w-5 h-5"></i> Facebook</a>
+        </div>
+      </div>
+      <div class="lg:col-span-3 rounded-3xl overflow-hidden border border-cream-border shadow-[0_40px_80px_-50px_rgba(22,21,20,.5)] min-h-[380px]">
+        <iframe title="Carte Beta Deutsch Zentrum" src="https://www.google.com/maps?q=2P8H%2B45%20Douala&output=embed" class="w-full h-full min-h-[380px]" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== CTA BAND ====== -->
+<section class="px-5 sm:px-8 lg:px-12 pb-10">
+  <div class="max-w-7xl mx-auto reveal relative overflow-hidden rounded-[32px] bg-rouge text-cream px-8 sm:px-14 py-14 lg:py-20">
+    <div class="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-cream/10"></div>
+    <div class="absolute -left-10 -bottom-14 h-64 w-64 rounded-full bg-ink/10"></div>
+    <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-[clamp(2rem,4.4vw,3.2rem)] font-extrabold leading-tight tracking-tight">Prêt à dire <span class="font-serif-it font-normal">« Hallo »</span> à votre avenir ?</h2>
+        <p class="mt-4 text-cream/85 text-[16.5px] leading-relaxed max-w-lg">Rejoignez Beta Deutsch Zentrum et faites de l'allemand votre passeport. Rentrée le 06 avril 2026.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 lg:justify-end">
+        <a href="https://wa.me/237696104293" target="_blank" rel="noopener" class="btn-arrow inline-flex items-center gap-2 rounded-full bg-cream text-ink px-7 py-4 font-bold hover:bg-ink hover:text-cream transition-colors">Écrire sur WhatsApp <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        <a href="tel:+237696104293" class="inline-flex items-center gap-2 rounded-full border border-cream/50 px-7 py-4 font-bold hover:bg-cream/10 transition-colors"><i data-lucide="phone" class="w-4 h-4"></i> Appeler</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-ink text-cream/80">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="lg:col-span-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-cream text-ink font-extrabold">BDZ</span>
+        <span class="font-extrabold text-cream text-lg">Beta Deutsch Zentrum</span>
+      </div>
+      <p class="mt-5 max-w-sm text-[15px] leading-relaxed">Centre de formation en langue allemande à Douala. Nous rendons le voyage vers l'Allemagne « à portée de main ».</p>
+      <div class="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-or-light"><span class="flag-stripe inline-block h-3 w-6 rounded-sm"></span> Travail · Discipline · Succès</div>
+    </div>
+    <div>
+      <div class="text-cream font-bold mb-4">Navigation</div>
+      <ul class="space-y-2.5 text-[15px]">
+        <li><a href="#centre" class="hover:text-cream">Le Centre</a></li>
+        <li><a href="#formations" class="hover:text-cream">Formations</a></li>
+        <li><a href="#methode" class="hover:text-cream">Méthode</a></li>
+        <li><a href="#galerie" class="hover:text-cream">Galerie</a></li>
+        <li><a href="#avis" class="hover:text-cream">Avis</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-cream font-bold mb-4">Contact</div>
+      <ul class="space-y-2.5 text-[15px]">
+        <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-1 text-or-light"></i> Face Collège Pozam, Douala</li>
+        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-or-light"></i> +237 696 10 42 93</li>
+        <li class="flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4 text-or-light"></i> betadeutschzentrum.com</li>
+        <li class="flex items-center gap-3 pt-1"><a href="https://www.instagram.com/betadeutsch/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-cream"><i data-lucide="instagram" class="w-5 h-5"></i></a><a href="https://web.facebook.com/p/BETA-BDZ-61561541496897/" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-cream"><i data-lucide="facebook" class="w-5 h-5"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-cream/10"><div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream/50"><p>© 2026 Beta Deutsch Zentrum. Tous droits réservés.</p><p>Douala, Cameroun — Deutsch für deine Zukunft.</p></div></div>
+</footer>
+
+<!-- level detail modal -->
+<div id="lvl" class="fixed inset-0 z-[60] hidden items-center justify-center bg-ink/80 modal-bg p-5 sm:p-6">
+  <div class="relative max-w-lg w-full rounded-[28px] bg-cream max-h-[90vh] overflow-y-auto shadow-2xl ring-1 ring-cream-border">
+    <button id="lvlClose" aria-label="Fermer" class="absolute top-4 right-4 z-10 h-11 w-11 rounded-full bg-cream/90 backdrop-blur border border-cream-border text-ink flex items-center justify-center hover:bg-rouge hover:text-cream hover:border-rouge transition-colors"><i data-lucide="x"></i></button>
+    <div id="lvlHeader" class="relative overflow-hidden rounded-t-[28px] px-8 pt-9 pb-9">
+      <div class="pointer-events-none absolute -top-12 -right-10 h-44 w-44 rounded-full bg-cream/10"></div>
+      <div class="pointer-events-none absolute -bottom-8 -left-6 h-28 w-28 rounded-full bg-cream/5"></div>
+      <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-1.5 flex"><span class="flex-1 bg-ink"></span><span class="flex-1 bg-rouge"></span><span class="flex-1 bg-or"></span></div>
+      <div class="relative flex items-center gap-4">
+        <span id="lvlBadge" class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-cream/15 text-cream text-xl font-extrabold ring-2 ring-cream/30 backdrop-blur shadow-lg"></span>
+        <div><div id="lvlLang" class="text-[11px] uppercase tracking-widest text-cream/80 font-bold"></div><h3 id="lvlTitle" class="text-2xl sm:text-[26px] font-extrabold text-cream leading-tight"></h3></div>
+      </div>
+    </div>
+    <div class="p-8 pt-6">
+      <p id="lvlDesc" class="text-muted leading-relaxed"></p>
+      <div class="mt-6"><div class="flex items-center gap-2 text-[11px] uppercase tracking-widest text-ink font-bold"><i data-lucide="target" class="w-4 h-4 text-rouge"></i>À la fin du niveau, vous saurez :</div><ul id="lvlList" class="mt-4 space-y-2.5 text-[15px] text-muted"></ul></div>
+      <div id="lvlPricing" class="mt-7 grid grid-cols-2 gap-3"></div>
+      <a id="lvlCta" href="#" target="_blank" rel="noopener" class="btn-arrow mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink text-cream px-6 py-4 font-bold hover:bg-rouge transition-colors">Se renseigner sur ce niveau <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- back to top -->
+<button id="toTop" aria-label="Haut de page" class="fixed bottom-6 right-6 z-40 h-12 w-12 rounded-full bg-ink text-cream shadow-xl opacity-0 pointer-events-none transition-all hover:bg-rouge flex items-center justify-center"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
+
+<!-- lightbox -->
+<!-- ====== MODAL INFO ====== -->
+<div id="info" class="fixed inset-0 z-[60] hidden items-center justify-center bg-ink/80 modal-bg p-5 sm:p-6">
+  <div class="relative w-full max-w-lg rounded-3xl bg-cream shadow-2xl max-h-[88vh] overflow-y-auto">
+    <button id="infoClose" aria-label="Fermer" class="absolute top-4 right-4 z-10 h-11 w-11 rounded-full bg-cream-soft border border-cream-border text-ink flex items-center justify-center"><i data-lucide="x"></i></button>
+    <div class="p-7 sm:p-9">
+      <span id="infoIcon" class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-ink text-or-light"><i data-lucide="info"></i></span>
+      <h3 id="infoTitle" class="mt-5 text-2xl font-extrabold text-ink leading-tight"></h3>
+      <p id="infoDesc" class="mt-4 text-muted leading-relaxed"></p>
+      <ul id="infoList" class="mt-5 space-y-2 text-[15px] text-muted"></ul>
+      <a id="infoCta" href="https://wa.me/237696104293" target="_blank" rel="noopener" class="btn-arrow mt-7 w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink text-cream px-6 py-4 font-bold hover:bg-rouge transition-colors">Nous contacter <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+    </div>
+  </div>
+</div>
+
+<div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-ink/80 modal-bg p-6">
+  <button id="lbClose" aria-label="Fermer" class="absolute top-5 right-5 h-11 w-11 rounded-full bg-cream text-ink flex items-center justify-center"><i data-lucide="x"></i></button>
+  <img id="lbImg" src="" alt="" class="max-h-[85vh] max-w-[92vw] rounded-2xl shadow-2xl">
+</div>
+
+<!-- tour modal -->
+<div id="tour" class="fixed inset-0 z-[60] hidden items-center justify-center bg-ink/80 modal-bg p-6">
+  <div class="relative max-w-2xl w-full rounded-3xl overflow-hidden bg-cream">
+    <button id="tourClose" aria-label="Fermer" class="absolute top-4 right-4 z-10 h-11 w-11 rounded-full bg-cream text-ink flex items-center justify-center shadow"><i data-lucide="x"></i></button>
+    <img src="https://storage.googleapis.com/ot-pt/code_agent/nano2_image_editing/2026-10-11/25fc66d49532/bdz_batiment_hd.jpeg?Expires=1794263549&GoogleAccessId=gcs-owner%40oreateai-434511.iam.gserviceaccount.com&Signature=MZsn4dy4CANmdm8WhJX1DH3qkydfzbykjUC8poWUgUFTFlq7v2qVNL88UDzUbjdFWE03O2VUHcWlGKWTnunBgnNuB8d2QSk6DdSGdF%2F%2Fw00lShE8UZd4CFj8NiiQagH8pvYz9WbqjoZaFlaKGmS5zeJHwu2GXDV%2FwoesSodT4gN6l4aJeBRIGvIXThEBS2e4rQCOP6Q6v3GNwoKC%2BIYXQxxBhwpGIJKvEabVK5olczUO4e8%2BjyUxR3%2BXZtoCZbPfVb1elAkpoCWpDdXPLlZMI30HjDejOiPg3Mi5nXAK8l7WGsK1DJN6Yc0VQVVp4WARRS2LckQQ4y1FBtOKpfIzTg%3D%3D" alt="Le centre BDZ à Douala" class="w-full h-64 object-cover">
+    <div class="p-8">
+      <h3 class="text-2xl font-extrabold text-ink">Bienvenue au Beta Deutsch Zentrum</h3>
+      <p class="mt-3 text-muted leading-relaxed">Un centre moderne et accueillant sur l'axe lourd Douala–Yaoundé, en face du Collège Pozam. Venez découvrir nos salles, rencontrer l'équipe et parler de votre projet pour l'Allemagne.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=2P8H%2B45%20Douala" target="_blank" rel="noopener" class="btn-arrow inline-flex items-center gap-2 rounded-full bg-ink text-cream px-6 py-3.5 font-bold hover:bg-rouge transition-colors">Itinéraire <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+        <a href="https://wa.me/237696104293" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-ink/70 px-6 py-3.5 font-bold text-ink hover:bg-ink hover:text-cream transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i> Nous écrire</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function icons(){ if(window.lucide){ lucide.createIcons(); } }
+  icons();
+  // reveal on scroll
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target);} });
+  },{threshold:0.14});
+  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  // counters
+  var cObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(!e.isIntersecting) return; var el=e.target; var to=+el.dataset.to; var t0=null;
+      function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/900,1); el.textContent=Math.round(p*to); if(p<1)requestAnimationFrame(step); }
+      requestAnimationFrame(step); cObs.unobserve(el);
+    });
+  },{threshold:0.6});
+  document.querySelectorAll('.count').forEach(function(el){ cObs.observe(el); });
+  // nav scroll state
+  var nav=document.querySelector('#nav nav');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>30){ nav.classList.add('shadow-lg'); nav.classList.remove('bg-cream-soft/70'); nav.classList.add('bg-cream-soft/95'); }
+    else { nav.classList.remove('shadow-lg'); nav.classList.add('bg-cream-soft/70'); nav.classList.remove('bg-cream-soft/95'); }
+    var tt=document.getElementById('toTop');
+    if(window.scrollY>500){ tt.classList.remove('opacity-0','pointer-events-none'); } else { tt.classList.add('opacity-0','pointer-events-none'); }
+  });
+  document.getElementById('toTop').addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  // drawer
+  var drawer=document.getElementById('drawer'), overlay=document.getElementById('overlay');
+  function openD(){ drawer.classList.remove('translate-x-full'); overlay.classList.remove('opacity-0','pointer-events-none'); }
+  function closeD(){ drawer.classList.add('translate-x-full'); overlay.classList.add('opacity-0','pointer-events-none'); }
+  document.getElementById('burger').addEventListener('click',openD);
+  document.getElementById('closeDrawer').addEventListener('click',closeD);
+  overlay.addEventListener('click',closeD);
+  document.querySelectorAll('.drawer-link').forEach(function(a){ a.addEventListener('click',closeD); });
+  // lightbox
+  var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg');
+  function openLb(src){ lbImg.src=src; lb.classList.remove('hidden'); lb.classList.add('flex'); }
+  function closeLb(){ lb.classList.add('hidden'); lb.classList.remove('flex'); lbImg.src=''; }
+  document.querySelectorAll('.gal').forEach(function(b){ b.addEventListener('click',function(){ openLb(b.dataset.src); }); });
+  document.getElementById('lbClose').addEventListener('click',closeLb);
+  lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
+  // tour modal
+  var tour=document.getElementById('tour');
+  function openT(){ tour.classList.remove('hidden'); tour.classList.add('flex'); }
+  function closeT(){ tour.classList.add('hidden'); tour.classList.remove('flex'); }
+  document.getElementById('openTour').addEventListener('click',openT);
+  document.getElementById('tourClose').addEventListener('click',closeT);
+  tour.addEventListener('click',function(e){ if(e.target===tour) closeT(); });
+  // tabs langue
+  var tabBtns=document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(function(b){ b.addEventListener('click',function(){
+    tabBtns.forEach(function(x){ x.classList.remove('is-active'); x.classList.add('text-muted'); });
+    b.classList.add('is-active'); b.classList.remove('text-muted');
+    var t=b.dataset.tab;
+    document.getElementById('grid-de').classList.toggle('hidden', t!=='de');
+    document.getElementById('grid-en').classList.toggle('hidden', t!=='en');
+  }); });
+  // level detail modal
+  var WA="https://wa.me/237696104293?text=";
+  var PRICE={insc:"10 000 FCFA",form:"90 000 FCFA",duree:"3 mois",rentree:"06 avril 2026"};
+  var RED="#C8102E",BLUE="#1B3A6B",INK="#161514",OR="#E0A008";
+  var LEVELS={
+    "de-a1":{badge:"A1",color:RED,lang:"Allemand \u00b7 Niveau A1 (CECRL)",title:"Les premiers pas",msg:"Allemand A1",desc:"Le point de d\u00e9part id\u00e9al pour les grands d\u00e9butants. On installe les bases de la prononciation, du vocabulaire et de la grammaire allemande, dans une ambiance rassurante.",list:["Vous pr\u00e9senter, saluer et \u00e9peler votre nom","Comprendre des mots et des phrases tr\u00e8s simples","Remplir un formulaire avec vos informations"]},
+    "de-a2":{badge:"A2",color:RED,lang:"Allemand \u00b7 Niveau A2 (CECRL)",title:"La vie quotidienne",msg:"Allemand A2",desc:"On consolide les acquis et on \u00e9largit le vocabulaire du quotidien pour gagner en aisance \u00e0 l'oral comme \u00e0 l'\u00e9crit.",list:["Parler de votre famille, vos achats, votre travail","Comprendre des annonces et messages courts","Vous d\u00e9brouiller dans les situations courantes"]},
+    "de-b1":{badge:"B1",color:BLUE,lang:"Allemand \u00b7 Niveau B1 (CECRL)",title:"L'autonomie",msg:"Allemand B1",desc:"Le niveau charni\u00e8re, souvent exig\u00e9 pour le visa et l'inscription universitaire en Allemagne. Vous devenez autonome.",list:["Vous exprimer sur vos projets et vos opinions","Comprendre l'essentiel d'un sujet familier","Faire face \u00e0 la plupart des situations de voyage"]},
+    "de-b2":{badge:"B2",color:BLUE,lang:"Allemand \u00b7 Niveau B2 (CECRL)",title:"\u00c9tudes & m\u00e9tier",msg:"Allemand B2",desc:"Vous abordez des sujets complexes et gagnez l'aisance n\u00e9cessaire pour \u00e9tudier ou travailler en allemand.",list:["Argumenter clairement et nuancer vos id\u00e9es","Suivre des cours et des r\u00e9unions professionnelles","Comprendre articles, rapports et \u00e9missions"]},
+    "de-c1":{badge:"C1",color:INK,lang:"Allemand \u00b7 Niveau C1 (CECRL)",title:"L'excellence",msg:"Allemand C1",desc:"Le niveau de la ma\u00eetrise, pour les parcours les plus exigeants : universit\u00e9s s\u00e9lectives et m\u00e9tiers qualifi\u00e9s.",list:["Vous exprimer couramment et spontan\u00e9ment","Comprendre des textes longs et exigeants","Utiliser la langue de fa\u00e7on souple et efficace"]},
+    "de-exam":{badge:"DE",color:OR,lang:"Allemand \u00b7 Certification",title:"Pr\u00e9paration Goethe & telc",msg:"la pr\u00e9paration aux examens d'allemand (Goethe / telc)",desc:"Un module d\u00e9di\u00e9 pour viser et obtenir votre certification officielle (Goethe-Zertifikat, telc), reconnue pour le visa et l'universit\u00e9.",list:["Entra\u00eenement aux 4 \u00e9preuves : \u00e9couter, lire, \u00e9crire, parler","Examens blancs en conditions r\u00e9elles","Strat\u00e9gies et gestion du temps le jour J"]},
+    "en-a1":{badge:"A1",color:BLUE,lang:"Anglais \u00b7 Niveau A1 (CEFR)",title:"First steps",msg:"Anglais A1",desc:"Id\u00e9al pour d\u00e9marrer l'anglais de z\u00e9ro. Bases de prononciation, vocabulaire et structures simples, en toute confiance.",list:["Vous pr\u00e9senter et saluer en anglais","Comprendre des mots et phrases simples","Donner vos informations personnelles"]},
+    "en-a2":{badge:"A2",color:BLUE,lang:"Anglais \u00b7 Niveau A2 (CEFR)",title:"Everyday English",msg:"Anglais A2",desc:"On \u00e9largit le vocabulaire du quotidien pour \u00e9changer plus librement sur des sujets familiers.",list:["Parler de la vie quotidienne et du travail","Comprendre des messages courts","Vous d\u00e9brouiller en voyage"]},
+    "en-b1":{badge:"B1",color:RED,lang:"Anglais \u00b7 Niveau B1 (CEFR)",title:"Independent user",msg:"Anglais B1",desc:"Vous devenez un utilisateur ind\u00e9pendant de l'anglais, \u00e0 l'\u00e9crit comme \u00e0 l'oral.",list:["Vous exprimer sur des sujets vari\u00e9s","Comprendre l'essentiel d'une discussion","G\u00e9rer les situations courantes de voyage"]},
+    "en-b2":{badge:"B2",color:RED,lang:"Anglais \u00b7 Niveau B2 (CEFR)",title:"Confident English",msg:"Anglais B2",desc:"L'aisance n\u00e9cessaire pour travailler et \u00e9tudier en anglais dans un cadre professionnel.",list:["Argumenter et d\u00e9fendre un point de vue","Suivre des r\u00e9unions et des cours","Comprendre articles et \u00e9missions"]},
+    "en-c1":{badge:"C1",color:INK,lang:"Anglais \u00b7 Niveau C1 (CEFR)",title:"Fluent English",msg:"Anglais C1",desc:"La ma\u00eetrise de l'anglais pour les contextes les plus exigeants, acad\u00e9miques comme professionnels.",list:["Vous exprimer couramment et spontan\u00e9ment","Comprendre des textes longs et complexes","Utiliser la langue avec souplesse"]},
+    "en-conv":{badge:"EN",color:OR,lang:"Anglais \u00b7 Conversation & tests",title:"Anglais oral & TOEFL/IELTS",msg:"l'anglais oral et la pr\u00e9paration TOEFL/IELTS",desc:"Ateliers de conversation et pr\u00e9paration aux tests internationaux (TOEFL, IELTS) pour booster votre oral et vos scores.",list:["Pratique intensive de l'oral","Examens blancs TOEFL / IELTS","Strat\u00e9gies pour viser un bon score"]}
+  };
+  function cell(l,v,hi,ic){ return '<div class="rounded-2xl border p-4 '+(hi?'border-rouge/30 bg-rouge/5':'border-cream-border bg-cream-soft')+'"><div class="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold '+(hi?'text-rouge':'text-muted')+'">'+(ic?'<i data-lucide="'+ic+'" class="w-3.5 h-3.5"></i>':'')+l+'</div><div class="mt-1.5 text-xl font-extrabold '+(hi?'text-rouge':'text-ink')+'">'+v+'</div></div>'; }
+  var lvl=document.getElementById('lvl');
+  function openLvl(key){ var d=LEVELS[key]; if(!d) return; var p=d.price||PRICE;
+    var bd=document.getElementById('lvlBadge'); bd.textContent=d.badge;
+    document.getElementById('lvlHeader').style.background=d.color||INK;
+    document.getElementById('lvlLang').textContent=d.lang;
+    document.getElementById('lvlTitle').textContent=d.title;
+    document.getElementById('lvlDesc').textContent=d.desc;
+    document.getElementById('lvlList').innerHTML=d.list.map(function(x){ return '<li class="flex items-start gap-3"><span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-rouge/10 text-rouge text-[11px] font-bold">\u2713</span><span>'+x+'</span></li>'; }).join('');
+    document.getElementById('lvlPricing').innerHTML=cell('Inscription',p.insc,false,'file-pen')+cell('Formation',p.form,false,'book-open')+cell('Dur\u00e9e',p.duree,false,'clock')+cell('Prochaine rentr\u00e9e',p.rentree,true,'calendar-check');
+    document.getElementById('lvlCta').href=WA+encodeURIComponent("Bonjour BDZ, je suis int\u00e9ress\u00e9(e) par "+(d.msg.indexOf('la ')===0||d.msg.indexOf("l'")===0?d.msg:"le niveau "+d.msg)+". Pouvez-vous me donner plus d'informations ?");
+    lvl.classList.remove('hidden'); lvl.classList.add('flex'); if(window.lucide) lucide.createIcons();
+  }
+  function closeLvl(){ lvl.classList.add('hidden'); lvl.classList.remove('flex'); }
+  document.querySelectorAll('.lvl-card').forEach(function(c){ c.addEventListener('click',function(){ openLvl(c.dataset.level); }); });
+  document.getElementById('lvlClose').addEventListener('click',closeLvl);
+  lvl.addEventListener('click',function(e){ if(e.target===lvl) closeLvl(); });
+  // info modal (modules & pourquoi)
+  var INFO={
+    etudier:{icon:"graduation-cap",title:"Étudier en Allemagne",desc:"L'Allemagne compte de nombreuses universités publiques où les frais de scolarité sont souvent gratuits ou très faibles. Les diplômes allemands sont reconnus et respectés dans le monde entier.",list:["Universités publiques souvent gratuites","Diplômes reconnus internationalement","Un niveau B1/B2 ouvre les portes de l'inscription"]},
+    travailler:{icon:"briefcase",title:"Travailler & Ausbildung",desc:"L'Allemagne recherche activement de la main-d'œuvre qualifiée. L'Ausbildung, c'est une formation professionnelle en alternance, rémunérée, qui mène directement à l'emploi.",list:["Formations professionnelles rémunérées (Ausbildung)","Forte demande de main-d'œuvre qualifiée","Un vrai tremplin vers un emploi stable"]},
+    voyager:{icon:"plane",title:"Voyager & vivre",desc:"Située au cœur de l'Europe, l'Allemagne est une porte d'entrée vers tout le continent. Maîtriser la langue facilite grandement les démarches de visa et l'intégration.",list:["Au cœur de l'Europe","Visa facilité quand la langue est maîtrisée","Une intégration bien plus simple au quotidien"]},
+    avenir:{icon:"compass",title:"Un avenir choisi",desc:"Apprendre l'allemand, ce n'est pas laisser le hasard décider. C'est donner un cap clair à votre projet, dès aujourd'hui — études, travail ou nouvelle vie.",list:["Un projet construit, pas aléatoire","Un cap clair dès aujourd'hui","Vous reprenez la main sur votre avenir"]},
+    methode:{icon:"presentation",title:"Notre méthode d'enseignement",desc:"Une pédagogie active centrée sur la pratique : immersion, expression orale régulière et exercices concrets, niveau par niveau selon le cadre européen.",list:["Immersion et pratique orale dès le début","Cours structurés niveau par niveau","Entraînement constant aux examens officiels"]},
+    salles:{icon:"snowflake",title:"Salles climatisées",desc:"Nos salles de classe sont climatisées pour vous offrir un environnement d'apprentissage confortable et propice à la concentration, toute l'année.",list:["Confort optimal en toute saison","Un cadre calme et agréable","Mieux pour la concentration et la mémoire"]},
+    biblio:{icon:"library",title:"Bibliothèque",desc:"Un espace et des ressources (livres, manuels, supports d'examen) à votre disposition pour réviser, approfondir et vous entraîner en dehors des cours.",list:["Manuels et supports d'entraînement","Ressources pour préparer les examens","Un lieu pour réviser au calme"]},
+    systeme:{icon:"globe-2",title:"Système européen (CECRL)",desc:"Toutes nos formations suivent le Cadre européen commun de référence pour les langues (CECRL), du A1 au C1 — le même standard que les examens Goethe et telc.",list:["Niveaux A1 à C1 harmonisés","Aligné sur les examens Goethe & telc","Un parcours lisible et reconnu partout"]},
+    wifi:{icon:"wifi",title:"WiFi Starlink illimité",desc:"L'établissement est équipé d'une connexion internet Starlink haut débit et illimitée, mise à disposition de tout le personnel. Un vrai plus pour la préparation des cours, la recherche et les ressources en ligne.",list:["Internet haut débit par satellite Starlink","Accès illimité pour tout le personnel","Idéal pour les ressources et examens en ligne"]}
+  };
+  var info=document.getElementById('info');
+  function openInfo(key){ var d=INFO[key]; if(!d) return;
+    document.getElementById('infoIcon').innerHTML='<i data-lucide="'+d.icon+'"></i>';
+    document.getElementById('infoTitle').textContent=d.title;
+    document.getElementById('infoDesc').textContent=d.desc;
+    document.getElementById('infoList').innerHTML=d.list.map(function(x){ return '<li class="flex items-start gap-2"><span class="text-rouge font-bold leading-5">\u2713</span><span>'+x+'</span></li>'; }).join('');
+    info.classList.remove('hidden'); info.classList.add('flex'); if(window.lucide) lucide.createIcons();
+  }
+  function closeInfo(){ info.classList.add('hidden'); info.classList.remove('flex'); }
+  document.querySelectorAll('.info-card').forEach(function(c){ c.addEventListener('click',function(){ openInfo(c.dataset.info); }); });
+  document.getElementById('infoClose').addEventListener('click',closeInfo);
+  info.addEventListener('click',function(e){ if(e.target===info) closeInfo(); });
+  // calendrier interactif (choix libre de date -> WhatsApp)
+  (function(){
+    var grid=document.getElementById('calGrid'); if(!grid) return;
+    var monthEl=document.getElementById('calMonth'), pickedEl=document.getElementById('calPicked'), cta=document.getElementById('calCta');
+    var MN=["janvier","f\u00e9vrier","mars","avril","mai","juin","juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"];
+    var today=new Date(); today.setHours(0,0,0,0);
+    var curMonth=new Date(today.getFullYear(),today.getMonth(),1);
+    var view=new Date(today.getFullYear(),today.getMonth(),1);
+    var selected=null;
+    function render(){
+      monthEl.textContent=MN[view.getMonth()]+" "+view.getFullYear();
+      grid.innerHTML='';
+      var startDow=(new Date(view.getFullYear(),view.getMonth(),1).getDay()+6)%7;
+      var days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+      var i;
+      for(i=0;i<startDow;i++){ grid.appendChild(document.createElement('span')); }
+      for(var d=1;d<=days;d++){
+        (function(day){
+          var cur=new Date(view.getFullYear(),view.getMonth(),day);
+          var btn=document.createElement('button');
+          btn.type='button'; btn.textContent=day;
+          var past=cur<today;
+          var isSel=selected && cur.getTime()===selected.getTime();
+          btn.className='h-9 rounded-xl text-sm font-semibold transition-colors '+(past?'text-cream/20 cursor-not-allowed':(isSel?'bg-or-light text-ink':'text-cream hover:bg-cream/10'));
+          if(past){ btn.disabled=true; } else { btn.addEventListener('click',function(){ selected=cur; update(); render(); }); }
+          grid.appendChild(btn);
+        })(d);
+      }
+    }
+    function update(){
+      if(!selected) return;
+      var txt=selected.getDate()+" "+MN[selected.getMonth()]+" "+selected.getFullYear();
+      pickedEl.textContent=txt;
+      cta.href="https://wa.me/237696104293?text="+encodeURIComponent("Bonjour BDZ, je souhaite commencer une formation \u00e0 partir du "+txt+". Pouvez-vous me confirmer la disponibilit\u00e9 ?");
+    }
+    document.getElementById('calPrev').addEventListener('click',function(){ var m=new Date(view.getFullYear(),view.getMonth()-1,1); if(m>=curMonth){ view=m; render(); } });
+    document.getElementById('calNext').addEventListener('click',function(){ view=new Date(view.getFullYear(),view.getMonth()+1,1); render(); });
+    render();
+  })();
+  // esc
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeLb(); closeT(); closeD(); closeLvl(); closeInfo(); } });
+})();
+</script>
+</body>
+</html>
