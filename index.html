@@ -62,7 +62,11 @@ html,body{background:#F5EFE6;color:#161514;font-family:'Plus Jakarta Sans',sans-
 .img-zoom{overflow:hidden;}
 .img-zoom img{transition:transform 1.2s cubic-bezier(.16,1,.3,1);}
 .img-zoom:hover img{transform:scale(1.07);}
-#drawer{transition:transform .5s cubic-bezier(.16,1,.3,1);}
+#drawer{transition:transform .5s cubic-bezier(.16,1,.3,1);transform:translateX(100%);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+#drawer.is-open{transform:translateX(0);}
+#overlay{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease;}
+#overlay.is-open{opacity:1;visibility:visible;pointer-events:auto;}
+body.menu-open{overflow:hidden;}
 .modal-bg{backdrop-filter:blur(10px);}
 .tab-btn.is-active{background:#161514;color:#F5EFE6;}
 .lvl-card{cursor:pointer;}
@@ -101,7 +105,7 @@ html,body{background:#F5EFE6;color:#161514;font-family:'Plus Jakarta Sans',sans-
 
 <!-- mobile drawer -->
 <div id="overlay" class="fixed inset-0 z-40 bg-ink/40 opacity-0 pointer-events-none transition-opacity duration-400"></div>
-<aside id="drawer" class="fixed top-0 right-0 z-50 h-full w-[82%] max-w-sm translate-x-full bg-cream-soft border-l border-cream-border px-7 py-7 flex flex-col">
+<aside id="drawer" class="fixed top-0 right-0 z-50 h-full w-[82%] max-w-sm bg-cream-soft border-l border-cream-border px-7 py-7 flex flex-col overflow-y-auto overscroll-contain">
   <div class="flex items-center justify-between">
     <span class="font-extrabold text-ink">Menu</span>
     <button id="closeDrawer" aria-label="Fermer" class="h-10 w-10 inline-flex items-center justify-center rounded-full border border-ink/60"><i data-lucide="x" class="w-5 h-5"></i></button>
@@ -771,12 +775,22 @@ html,body{background:#F5EFE6;color:#161514;font-family:'Plus Jakarta Sans',sans-
   });
   document.getElementById('toTop').addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
   // drawer
-  var drawer=document.getElementById('drawer'), overlay=document.getElementById('overlay');
-  function openD(){ drawer.classList.remove('translate-x-full'); overlay.classList.remove('opacity-0','pointer-events-none'); }
-  function closeD(){ drawer.classList.add('translate-x-full'); overlay.classList.add('opacity-0','pointer-events-none'); }
-  document.getElementById('burger').addEventListener('click',openD);
+  var drawer=document.getElementById('drawer'), overlay=document.getElementById('overlay'), burger=document.getElementById('burger');
+  function setDrawer(open){
+    drawer.classList.toggle('is-open', open);
+    overlay.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  }
+  function openD(){ setDrawer(true); }
+  function closeD(){ setDrawer(false); }
+  burger.addEventListener('click', function(){
+    var isOpen = drawer.classList.contains('is-open');
+    setDrawer(!isOpen);
+  });
   document.getElementById('closeDrawer').addEventListener('click',closeD);
   overlay.addEventListener('click',closeD);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && drawer.classList.contains('is-open')) closeD(); });
   document.querySelectorAll('.drawer-link').forEach(function(a){ a.addEventListener('click',closeD); });
   // lightbox
   var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg');
